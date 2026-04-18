@@ -4,12 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gentle Words</title>
+
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css?family=Lato:400|Josefin+Sans:600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.typekit.net/amd7pdj.css">
 </head>
 
 <body>
 
+  <!-- NAV -->
   <nav>
     <a href="index.html" class="logo">gentle words</a>
 
@@ -19,19 +22,19 @@
 
       <div class="language-menu">
         <button class="language-button" id="languageToggle" type="button">Language</button>
-        
+
         <ul class="language-panel" id="languagePanel">
           <li><button type="button" data-lang="en">English</button></li>
-          <li><button type="button" data-lang="de">Arabic</button></li>
-          <li><button type="button" data-lang="de">Burmese</button></li>
-          <li><button type="button" data-lang="de">Hindi</button></li>
-          <li><button type="button" data-lang="fr">Indonesian</button></li>
-          <li><button type="button" data-lang="de">Japanese</button></li>
-          <li><button type="button" data-lang="de">Korean</button></li>
-          <li><button type="button" data-lang="es">Mandarin-Chinese</button></li>
-          <li><button type="button" data-lang="es">Tagalog</button></li>
-          <li><button type="button" data-lang="de">Thai</button></li>
-          <li><button type="button" data-lang="de">Vietnamese</button></li>
+          <li><button type="button" data-lang="ar">Arabic</button></li>
+          <li><button type="button" data-lang="my">Burmese</button></li>
+          <li><button type="button" data-lang="hi">Hindi</button></li>
+          <li><button type="button" data-lang="id">Indonesian</button></li>
+          <li><button type="button" data-lang="ja">Japanese</button></li>
+          <li><button type="button" data-lang="ko">Korean</button></li>
+          <li><button type="button" data-lang="zh">Mandarin-Chinese</button></li>
+          <li><button type="button" data-lang="tl">Tagalog</button></li>
+          <li><button type="button" data-lang="th">Thai</button></li>
+          <li><button type="button" data-lang="vi">Vietnamese</button></li>
         </ul>
       </div>
 
@@ -39,163 +42,226 @@
     </div>
   </nav>
 
-  <section class="hero-full">
-    <div class="hero-full-image">
-      image placeholder
-    </div>
+  <!-- HERO -->
+  <section class="home-hero">
+    <img class="home-hero-image" src="imgs/heroBear.png" alt="Gentle Words hero image">
 
-    <div class="hero-full-content">
-      <h1>Replace this heading</h1>
-      <p>
-        Replace this text with your main message. Keep it short and calm.
-      </p>
-
-      <a href="about/index.html" class="hero-button">Learn More</a>
-    </div>
-  </section>
-
-  <section class="subscription-section">
-    <div class="subscription-header">
-      <p class="section-label">How it works</p>
-      <p class="section-intro">
-        why the subscription exists and what kind of support or message it provides each month.
-      </p>
-    </div>
-
-    <div class="subscription-steps">
-      <div class="step-card">
-        <div class="step-image-placeholder">image placeholder</div>
-        <h3>Step One</h3>
-        <p>
-          Choose a subscription option or learn about the monthly theme.
+    <div class="home-hero-overlay">
+      <div class="home-hero-text">
+        <p class="hero-kicker">Faith, Reflection, and Gentle Support</p>
+        <h1></h1>
+        <p class="hero-text">
+          Replace silence with care.
         </p>
-      </div>
 
-      <div class="step-card">
-        <div class="step-image-placeholder">image placeholder</div>
-        <h3>Step Two</h3>
-        <p>
-          Receive a teddy bear with a tag that discusses the weekly phrase and a faith-based reflection.
-        </p>
-      </div>
-
-      <div class="step-card">
-        <div class="step-image-placeholder">image placeholder</div>
-        <h3>Step Three</h3>
-        <p>
-          Reflect, learn, and use the website for deeper context and resources.
-        </p>
-      </div>
-    </div>
-
-    <div class="subscription-highlight">
-      <div class="highlight-text">
-        <h3>What the subscription is for</h3>
-        <p>
-          Replace this paragraph with your main explanation. This can describe how
-          the subscription turns the campaign into an ongoing experience through
-          monthly teddy bears, reflective phrases, and supportive faith-centered
-          messaging.
-        </p>
-      </div>
-
-      <div class="highlight-image-placeholder">
-        larger image placeholder
+        <div class="hero-actions">
+          <a href="about/index.html" class="hero-button">Learn More</a>
+          <a href="signin/index.html" class="hero-button secondary-button">Subscribe</a>
+        </div>
       </div>
     </div>
   </section>
 
-<section class="info-section">
-  <div class="info-grid">
-
-    <div class="info-card info-left">
-      <p class="info-label">Support and Community</p>
+  <!-- FEATURED SERVICES / EVENTS -->
+  <section class="feature-section">
+    <div class="section-heading">
+      <p class="section-label">Support and Community</p>
       <h2>Services and Events</h2>
-
-      <div class="info-block">
-        <h3>Services</h3>
-        <p>
-          Explore gentle resources designed to support reflection, healing,
-          and meaningful connection in everyday life.
-        </p>
-      </div>
-
-      <div class="info-block">
-        <h3>Events</h3>
-        <p>
-          Join community gatherings, guided sessions, and wellness centered
-          events created to encourage presence and belonging.
-        </p>
-      </div>
     </div>
 
-    <div class="info-card info-right">
-      <p class="info-label">Daily Reflection</p>
+    <div class="feature-layout">
+      <div class="feature-main-card">
+        <div class="feature-main-image">featured image</div>
+
+        <div class="feature-main-content">
+          <h3>Gentle Reflection Sessions</h3>
+          <p>
+            Small guided spaces where individuals can pause, reflect, and unpack emotions in a calm, non-judgmental environment.
+          </p>
+
+          <a href="#" class="feature-link">Learn More</a>
+        </div>
+      </div>
+
+      <div class="feature-side-list">
+        <article class="feature-side-card">
+          <div class="feature-side-image">image</div>
+          <div class="feature-side-text">
+            <h4>Cultural Healing Circles</h4>
+            <p>
+              Community-based conversations centered around shared Asian cultural experiences.
+            </p>
+          </div>
+        </article>
+
+        <article class="feature-side-card">
+          <div class="feature-side-image">image</div>
+          <div class="feature-side-text">
+            <h4>Faith and Mindfulness Guidance</h4>
+            <p>
+              Gentle spiritual reflections paired with grounding practices and stillness.
+            </p>
+          </div>
+        </article>
+
+        <article class="feature-side-card">
+          <div class="feature-side-image">image</div>
+          <div class="feature-side-text">
+            <h4>Monthly Gentle Words Gatherings</h4>
+            <p>
+              Quiet, welcoming gatherings centered around rest, identity, forgiveness, and growth.
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUBSCRIPTION -->
+  <section class="subscription-section">
+    <div class="section-heading">
+      <p class="section-label">How it works</p>
+      <h2>Monthly Subscription</h2>
+      <p class="section-intro">
+        Explain why the subscription exists and what kind of support or message it provides each month.
+      </p>
+    </div>
+
+    <div class="subscription-layout">
+      <div class="subscription-steps">
+        <article class="step-card">
+          <div class="step-image-placeholder">image placeholder</div>
+          <h3>Step One</h3>
+          <p>
+            Create an account and subscribe to receive a monthly teddy bear and access to more of the website’s resources.
+          </p>
+        </article>
+
+        <article class="step-card">
+          <div class="step-image-placeholder">image placeholder</div>
+          <h3>Step Two</h3>
+          <p>
+            Receive a teddy bear with a tag that discusses the weekly phrase and a faith-based reflection.
+          </p>
+        </article>
+
+        <article class="step-card">
+          <div class="step-image-placeholder">image placeholder</div>
+          <h3>Step Three</h3>
+          <p>
+            Reflect, learn, and use the website for deeper context and resources.
+          </p>
+        </article>
+      </div>
+
+      <div class="subscription-highlight-card">
+        <div class="highlight-text">
+          <h3>What the subscription is for</h3>
+          <p>
+            Replace this paragraph with your main explanation. This can describe how the subscription turns the campaign into an ongoing experience through monthly teddy bears, reflective phrases, and supportive faith-centered messaging.
+          </p>
+        </div>
+
+        <div class="highlight-image-placeholder">
+          larger image placeholder
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE + DAILY REFLECTION -->
+  <section class="reflection-section">
+    <div class="reflection-card">
+      <p class="section-label">Daily Reflection</p>
       <h2>Quotes</h2>
 
-      <p class="quote-text">
-        “You do not have to carry everything at once. Growth can be quiet,
-        gentle, and still meaningful.”
-      </p>
+      <blockquote class="quote-text">
+        “You do not have to carry everything at once. Growth can be quiet, gentle, and still meaningful.”
+      </blockquote>
 
       <p class="quote-subtext">
         A space for thoughtful words that bring comfort, clarity, and calm.
       </p>
     </div>
+  </section>
 
-  </div>
-</section>
-
-<section class="stories-section">
-    <div class="stories-header">
+  <!-- STORIES -->
+  <section class="stories-section">
+    <div class="section-heading stories-heading">
+      <p class="section-label">Shared Reflection</p>
       <h2>Latest Stories</h2>
       <a href="#" class="stories-button">View More</a>
     </div>
 
     <div class="stories-layout">
-      <div class="featured-story">
+      <article class="featured-story">
         <div class="featured-image-placeholder">large image placeholder</div>
 
         <div class="featured-content">
-          <h3>Replace with featured story title</h3>
-          <p class="featured-meta">Category • Date</p>
+          <h3>I Thought Being Strong Meant Staying Silent</h3>
+          <p class="featured-meta">Personal Reflection • April 2026</p>
           <p class="featured-text">
-            Replace this with a short summary for the main story or testimonial.
-            Keep it brief, simple, and easy to scan.
+            Growing up, I was taught that keeping things to myself was a form of strength. It wasn’t until I reached burnout that I realized silence wasn’t protecting me — it was isolating me.
+          </p>
+          <p class="featured-text">
+            Through small conversations and gentle reminders, I learned that expressing emotions isn’t weakness. It’s honesty.
           </p>
         </div>
-      </div>
+      </article>
 
       <div class="story-list">
-        <div class="story-item">
+        <article class="story-item">
           <div class="story-thumb-placeholder">image</div>
           <div class="story-info">
-            <h4>Replace with short title</h4>
-            <p>Short description or supporting text goes here.</p>
+            <h4>Learning to Rest Without Guilt</h4>
+            <p>
+              For years, I felt like resting meant falling behind. Now, I see it as part of moving forward.
+            </p>
           </div>
-        </div>
+        </article>
 
-        <div class="story-item">
+        <article class="story-item">
           <div class="story-thumb-placeholder">image</div>
           <div class="story-info">
-            <h4>Replace with short title</h4>
-            <p>Short description or supporting text goes here.</p>
+            <h4>Healing Doesn’t Always Look Like Progress</h4>
+            <p>
+              Some days feel like setbacks. But sometimes, just staying present is enough.
+            </p>
           </div>
-        </div>
+        </article>
 
-        <div class="story-item">
+        <article class="story-item">
           <div class="story-thumb-placeholder">image</div>
           <div class="story-info">
-            <h4>Replace with short title</h4>
-            <p>Short description or supporting text goes here.</p>
+            <h4>My Parents Never Talked About Feelings</h4>
+            <p>
+              Understanding emotions wasn’t something I grew up with. But it’s something I’m slowly allowing myself to explore.
+            </p>
           </div>
-        </div>
+        </article>
       </div>
     </div>
   </section>
 
+  <!-- FLORAL BAND -->
+  <section class="home-floral-band">
+    <img src="imgs/BGF.png" alt="Floral background">
+
+    <div class="home-floral-content">
+      <div class="floral-card">
+        <p class="section-label">A Gentle Reminder</p>
+        <h2>Growth can still be soft.</h2>
+        <p>
+          This space was created to hold reflection, faith, and emotional care together.
+          Take your time here.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer>
-    <p>&copy; 2023 Gentle Words. All rights reserved.</p>
+    <p>&copy; 2026 Gentle Words. DES505 Capstone Project.</p>
   </footer>
 
   <script src="main.js"></script>
