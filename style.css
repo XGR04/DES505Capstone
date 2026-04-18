@@ -207,8 +207,7 @@ nav {
 .hero-actions {
   margin-top: 24px;
   display: flex;
-  gap: 14px;
-  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
 .hero-button {
@@ -286,6 +285,29 @@ nav {
   color: var(--text-soft);
   margin-top: 10px;
   max-width: 680px;
+}
+
+.step-image-wrap {
+  min-height: 220px;
+  border-radius: 24px;
+  margin-bottom: 16px;
+  background: rgba(255, 250, 240, 0.82);
+  border: 1px solid rgba(120, 92, 58, 0.08);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  overflow: hidden;
+}
+
+.step-image {
+  width: 100%;
+  max-width: 220px;
+  max-height: 180px;
+  height: auto;
+  object-fit: contain;
+  display: block;
 }
 
 /* FEATURE SECTION */
@@ -402,10 +424,11 @@ nav {
   padding: 22px;
 }
 
-.step-image-placeholder,
 .highlight-image-placeholder,
 .featured-image-placeholder,
-.story-thumb-placeholder {
+.story-thumb-placeholder,
+.feature-side-image,
+.feature-main-image {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -413,12 +436,6 @@ nav {
   border: 1px solid rgba(120, 92, 58, 0.08);
   color: #7e6858;
   text-transform: lowercase;
-}
-
-.step-image-placeholder {
-  min-height: 170px;
-  border-radius: 24px;
-  margin-bottom: 16px;
 }
 
 .step-card h3 {
@@ -772,4 +789,14 @@ footer p {
     min-height: 260px;
     padding: 36px 18px 70px;
   }
+
+  .step-image-wrap {
+  min-height: 180px;
+  padding: 14px;
+}
+
+.step-image {
+  max-width: 180px;
+  max-height: 150px;
+}
 }
