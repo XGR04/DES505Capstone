@@ -190,7 +190,7 @@ nav {
 .home-hero-text {
   max-width: 500px;
   margin-left: auto;
-  margin-right: 8%;
+  margin-right: 15%;
   padding: 0;
   background: none;
   border: none;
@@ -266,6 +266,10 @@ nav {
 /* SHARED SECTION */
 .subscription-layout {
   display: block;
+}
+
+.subscription-section {
+    margin-top: 140px;
 }
 
 .subscription-steps {
@@ -352,13 +356,14 @@ nav {
 
 /* REFLECTION */
 .reflection-card {
-  background: linear-gradient(135deg, rgba(205, 136, 128, 0.14), rgba(255, 251, 243, 0.78));
-  border: 1px solid rgba(205, 136, 128, 0.16);
-  border-radius: var(--radius-large);
-  padding: 38px;
-  box-shadow: var(--shadow-soft);
-}
+  max-width: 650px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 28px 32px;
+  backdrop-filter: blur(8px);
 
+  border-radius: 24px;
+}
 .reflection-card h2 {
   font-size: 2rem;
   font-weight: 500;
@@ -375,8 +380,25 @@ nav {
 }
 
 .quote-subtext {
-  color: var(--text-soft);
+  color: var(--deep-green);
   max-width: 620px;
+}
+
+.reflect-sec {
+  position: relative;
+  min-height: 220px;
+  display: flex;
+  align-items: center;
+
+  background:
+    linear-gradient(
+      to right,
+      rgba(250, 246, 239, 0.1) 100%
+    ),
+    url("imgs/flowerStrip.jpg");
+
+  background-size: cover;
+  background-position: center;
 }
 
 /* FEATURES */
@@ -814,7 +836,7 @@ footer p {
   }
 
   .subscription-section,
-  .reflection-section,
+  .reflect-sec,
   .feature-section,
   .stories-section {
     padding: 0 18px;
