@@ -253,21 +253,20 @@ nav {
   right: 0;
   bottom: 0;
   height: 140px;
-  background: linear-gradient(
-    to bottom,
-    rgba(250, 246, 239, 0) 0%,
-    rgba(250, 246, 239, 0.6) 55%,
-    rgba(250, 246, 239, 1) 100%
-  );
+background: linear-gradient(
+  to bottom,
+  rgba(224, 143, 141, 0) 0%,
+  rgba(224, 143, 141, 0.6) 55%,
+  rgba(224, 143, 141, 1) 100%
+);
   pointer-events: none;
   z-index: 3;
 }
 
 /* MONTHLY SUBSCRIPTION */
 .subscription-section {
-  margin-top: 140px;
   padding: 90px 0 110px;
-  background: #889a44;
+  background: #e08f8d;
   position: relative;
 }
 
@@ -296,7 +295,6 @@ nav {
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 44px;
 }
 
 .subscription-steps::before {
@@ -313,9 +311,11 @@ nav {
 .step-card {
   position: relative;
   display: grid;
-  grid-template-columns: 1fr 120px 1fr;
+  grid-auto-flow: column;
+  grid-template-columns: minmax(180px, 320px) 180px minmax(280px, 380px);
+  justify-content: center;
   align-items: center;
-  gap: 28px;
+  gap: 18px;
 }
 
 .step-card::before {
@@ -503,11 +503,15 @@ nav {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 0;
+  top: 0;
   height: 140px;
-  background: linear-gradient(
-    to top,
 
+  background: linear-gradient(
+    to bottom,
+    rgba(224, 143, 141, 1) 0%,
+    rgba(224, 143, 141, 0.8) 40%,
+    rgba(224, 143, 141, 0.4) 70%,
+    rgba(224, 143, 141, 0) 100%
   );
 }
 
