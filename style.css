@@ -190,7 +190,7 @@ nav {
 .home-hero-text {
   max-width: 500px;
   margin-left: auto;
-  margin-right: 15%;
+  margin-right: 10%;
   padding: 0;
   background: none;
   border: none;
@@ -203,7 +203,7 @@ nav {
 .hero-kicker {
   font-size: 1rem;
   margin-bottom: 10px;
-  color: var(--olive);
+  color: #103522;
   letter-spacing: 0.04em;
 }
 
@@ -211,16 +211,16 @@ nav {
   font-family: "erotique-alternate", sans-serif;
   font-weight: 800;
   font-style: normal;
-  font-size: 4rem;
-  line-height: 1.05;
+  font-size: 3.5rem;
+  line-height: 1;
   letter-spacing: 0.04em;
   color: var(--deep-green);
   margin-bottom: 16px;
 }
 
 .hero-text {
-  font-size: 1.08rem;
-  color: var(--text-soft);
+  font-size: 2rem;
+  color: #103522;
   max-width: 400px;
 }
 
@@ -494,16 +494,32 @@ nav {
 }
 
 .purpose-content .intro {
-  font-size: 1.1rem;
-  color: var(--text-soft);
+  font-size: 1.7rem;
+  color: #103522;
   line-height: 1.8;
   margin-bottom: 10px;
 }
 
 .purpose-content .sub {
-  font-size: 1rem;
-  color: var(--text-soft);
+  font-size: 2rem;
+  color: #103522;
   opacity: 0.85;
+}
+
+.purpose-content .title-decor {
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+}
+
+.purpose-content .title-decor img {
+  max-width: 500px;
+  width: 100%;
+  padding: 50px 0px;
+}
+
+.sub {
+  line-height: 1.5;
 }
 
 /* REFLECTION */
