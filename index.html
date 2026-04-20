@@ -17,29 +17,31 @@
     <a href="index.html" class="logo">gentle words</a>
 
     <div class="nav-right">
-      <a href="about/index.html">About Us</a>
-      <a href="contact/index.html">Contact Us</a>
+  <button class="subscribe-button" id="openSubscribe" type="button">Subscribe</button>
 
-      <div class="language-menu">
-        <button class="language-button" id="languageToggle" type="button">Language</button>
+  <a href="about/index.html">About Us</a>
+  <a href="contact/index.html">Contact Us</a>
+  
+  <div class="language-menu">
+    <button class="language-button" id="languageToggle" type="button">Language</button>
 
-        <ul class="language-panel" id="languagePanel">
-          <li><button type="button" data-lang="en">English</button></li>
-          <li><button type="button" data-lang="ar">Arabic</button></li>
-          <li><button type="button" data-lang="my">Burmese</button></li>
-          <li><button type="button" data-lang="hi">Hindi</button></li>
-          <li><button type="button" data-lang="id">Indonesian</button></li>
-          <li><button type="button" data-lang="ja">Japanese</button></li>
-          <li><button type="button" data-lang="ko">Korean</button></li>
-          <li><button type="button" data-lang="zh">Mandarin-Chinese</button></li>
-          <li><button type="button" data-lang="tl">Tagalog</button></li>
-          <li><button type="button" data-lang="th">Thai</button></li>
-          <li><button type="button" data-lang="vi">Vietnamese</button></li>
-        </ul>
-      </div>
+    <ul class="language-panel" id="languagePanel">
+      <li><button type="button" data-lang="en">English</button></li>
+      <li><button type="button" data-lang="ar">Arabic</button></li>
+      <li><button type="button" data-lang="my">Burmese</button></li>
+      <li><button type="button" data-lang="hi">Hindi</button></li>
+      <li><button type="button" data-lang="id">Indonesian</button></li>
+      <li><button type="button" data-lang="ja">Japanese</button></li>
+      <li><button type="button" data-lang="ko">Korean</button></li>
+      <li><button type="button" data-lang="zh">Mandarin-Chinese</button></li>
+      <li><button type="button" data-lang="tl">Tagalog</button></li>
+      <li><button type="button" data-lang="th">Thai</button></li>
+      <li><button type="button" data-lang="vi">Vietnamese</button></li>
+    </ul>
+  </div>
 
-      <a href="signin/index.html" class="login-button">Sign Up/Log In</a>
-    </div>
+  <button class="login-button" id="openLogin" type="button">Log In</button>
+</div>
   </nav>
 
   <main>
@@ -311,6 +313,64 @@
     </section>
 
   </main>
+
+  
+    <!-- SUBSCRIBE POPUP -->
+<div class="subscribe-modal" id="subscribeModal" aria-hidden="true">
+  <div class="subscribe-backdrop" id="subscribeBackdrop"></div>
+
+  <div class="subscribe-sheet" role="dialog" aria-modal="true" aria-labelledby="subscribeTitle">
+    <button class="subscribe-close" id="closeSubscribe" type="button" aria-label="Close">×</button>
+
+    <div class="subscribe-inner">
+
+  <!-- STEP 1 -->
+  <div class="onboard-step active" id="step1">
+    <p class="subscribe-eyebrow">Your Monthly Bear</p>
+    <h2>Start your journey to softer thinking</h2>
+
+    <p class="subscribe-copy">
+      For $5/month, receive a teddy and a gentle message to support reflection and emotional ease.
+    </p>
+
+    <div class="bear-preview">
+      <img src="imgs/bear.png" alt="Teddy bear preview">
+    </div>
+
+    <button class="onboard-next" data-next="step2">
+      Continue
+    </button>
+  </div>
+
+
+  <!-- STEP 2 -->
+  <div class="onboard-step" id="step2">
+    <p class="subscribe-eyebrow">Personalization</p>
+    <h2>Add a small touch</h2>
+
+    <p class="subscribe-copy">
+      Would you like your bear to include a random accessory?
+    </p>
+
+    <div class="option-group">
+      <button class="option-btn" data-value="yes">
+        Yes, surprise me
+      </button>
+
+      <button class="option-btn" data-value="no">
+        No, keep it simple
+      </button>
+    </div>
+
+    <div class="onboard-actions">
+      <button class="onboard-back" data-back="step1">Back</button>
+      <button class="onboard-next" data-next="step3">Continue</button>
+    </div>
+  </div>
+
+</div>
+  </div>
+</div>
 
   <!-- FOOTER -->
   <footer>

@@ -11,39 +11,21 @@
 <body>
 
   <nav>
-    <a href="../index.html" class="logo">gentle words</a>
 
-    <div class="nav-right">
-      <a href="../about/index.html">About Us</a>
-      <a href="../contact/index.html">Contact Us</a>
-
-      <div class="language-menu">
-        <button class="language-button" id="languageToggle" type="button">Language</button>
-        <ul class="language-panel" id="languagePanel">
-          <li><button type="button" data-lang="en">English</button></li>
-          <li><button type="button" data-lang="de">Arabic</button></li>
-          <li><button type="button" data-lang="de">Burmese</button></li>
-          <li><button type="button" data-lang="de">Hindi</button></li>
-          <li><button type="button" data-lang="fr">Indonesian</button></li>
-          <li><button type="button" data-lang="de">Japanese</button></li>
-          <li><button type="button" data-lang="de">Korean</button></li>
-          <li><button type="button" data-lang="es">Mandarin-Chinese</button></li>
-          <li><button type="button" data-lang="es">Tagalog</button></li>
-          <li><button type="button" data-lang="de">Thai</button></li>
-          <li><button type="button" data-lang="de">Vietnamese</button></li>
-        </ul>
-      </div>
-
-      <a href="../signin/index.html" class="login-button">Sign Up/Log In</a>
+      <button class="login-button auth-open" id="openAuth" type="button">Sign Up/Log In</button>
     </div>
   </nav>
 
-  <section class="auth-section">
-    <div class="auth-shell" id="authShell">
+  <div class="auth-modal" id="authModal" aria-hidden="true">
+  <div class="auth-backdrop" id="authBackdrop"></div>
 
+  <div class="auth-dialog" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+    <button class="auth-close" id="closeAuth" type="button" aria-label="Close">×</button>
+
+    <div class="auth-shell" id="authShell">
       <div class="auth-panel auth-signin">
         <div class="auth-form-wrap">
-          <h1>Sign In</h1>
+          <h1 id="authTitle">Sign In</h1>
           <p class="auth-subtext">
             Access your account to view stories, reflections, and subscription updates.
           </p>
@@ -102,9 +84,9 @@
           <button class="switch-button" id="showSignup" type="button">Sign Up</button>
         </div>
       </div>
-
     </div>
-  </section>
+  </div>
+</div>
 
   <footer>
     <p>&copy; 2023 Gentle Words. All rights reserved.</p>
