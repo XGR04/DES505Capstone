@@ -65,8 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
      SUBSCRIBE MODAL
   ========================= */
   const subscribeModal = document.getElementById("subscribeModal");
-  const openSubscribe = document.getElementById("openSubscribe");
-  const closeSubscribe = document.getElementById("closeSubscribe");
+  const openSubscribeButtons = document.querySelectorAll(".subscribe-trigger");  const closeSubscribe = document.getElementById("closeSubscribe");
   const subscribeBackdrop = document.getElementById("subscribeBackdrop");
 
   function openSubscribeModal() {
@@ -83,7 +82,10 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.classList.remove("subscribe-lock");
   }
 
-  if (openSubscribe) openSubscribe.addEventListener("click", openSubscribeModal);
+  openSubscribeButtons.forEach(btn => {
+  btn.addEventListener("click", openSubscribeModal);
+});
+
   if (closeSubscribe) closeSubscribe.addEventListener("click", closeSubscribeModal);
   if (subscribeBackdrop) subscribeBackdrop.addEventListener("click", closeSubscribeModal);
 
