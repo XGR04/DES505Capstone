@@ -24,12 +24,9 @@ document.addEventListener("DOMContentLoaded", function () {
      AUTH MODAL (LOGIN)
   ========================= */
   const authModal = document.getElementById("authModal");
-  const openAuth = document.getElementById("openAuth");
+  const openAuth = document.getElementById("openLogin");
   const closeAuth = document.getElementById("closeAuth");
   const authBackdrop = document.getElementById("authBackdrop");
-  const authShell = document.getElementById("authShell");
-  const showSignup = document.getElementById("showSignup");
-  const showSignin = document.getElementById("showSignin");
 
   function openAuthModal() {
     if (!authModal) return;
@@ -49,18 +46,6 @@ document.addEventListener("DOMContentLoaded", function () {
   if (closeAuth) closeAuth.addEventListener("click", closeAuthModal);
   if (authBackdrop) authBackdrop.addEventListener("click", closeAuthModal);
 
-  if (showSignup && authShell) {
-    showSignup.addEventListener("click", function () {
-      authShell.classList.add("show-signup");
-    });
-  }
-
-  if (showSignin && authShell) {
-    showSignin.addEventListener("click", function () {
-      authShell.classList.remove("show-signup");
-    });
-  }
-
   /* =========================
      SUBSCRIBE MODAL
   ========================= */
@@ -69,18 +54,30 @@ document.addEventListener("DOMContentLoaded", function () {
   const subscribeBackdrop = document.getElementById("subscribeBackdrop");
 
   function openSubscribeModal() {
-    if (!subscribeModal) return;
-    subscribeModal.classList.add("show");
-    subscribeModal.setAttribute("aria-hidden", "false");
-    document.body.classList.add("subscribe-lock");
-  }
+  if (!subscribeModal) return;
+  subscribeModal.classList.add("show");
+  subscribeModal.setAttribute("aria-hidden", "false");
+  document.body.classList.add("subscribe-lock");
+
+  showStep("step1");
+}
 
   function closeSubscribeModal() {
-    if (!subscribeModal) return;
-    subscribeModal.classList.remove("show");
-    subscribeModal.setAttribute("aria-hidden", "true");
-    document.body.classList.remove("subscribe-lock");
-  }
+  if (!subscribeModal) return;
+  subscribeModal.classList.remove("show");
+  subscribeModal.setAttribute("aria-hidden", "true");
+  document.body.classList.remove("subscribe-lock");
+
+  showStep("step1");
+
+  document.querySelectorAll(".option-btn, .cause-btn").forEach(btn => {
+    btn.classList.remove("selected");
+  });
+
+  document.querySelectorAll(".preference-select, .custom-cause-input, .signup-field input").forEach(field => {
+    field.value = "";
+  });
+}
 
   openSubscribeButtons.forEach(btn => {
   btn.addEventListener("click", openSubscribeModal);
@@ -152,23 +149,7 @@ const closeSubscribeSuccess = document.getElementById("closeSubscribeSuccess");
 
 if (closeSubscribeSuccess) {
   closeSubscribeSuccess.addEventListener("click", () => {
-
-    // close modal
     closeSubscribeModal();
-
-    // reset to step 1
-    showStep("step1");
-
-    // clear selected buttons
-    document.querySelectorAll(".option-btn, .cause-btn").forEach(btn => {
-      btn.classList.remove("selected");
-    });
-
-    // clear inputs
-    document.querySelectorAll(".preference-select, .custom-cause-input, .signup-field input").forEach(field => {
-      field.value = "";
-    });
-
   });
 }
 

@@ -1898,3 +1898,14 @@ body.subscribe-lock {
     transform: scale(1);
   }
 }
+
+/* SIMPLE LOGIN FIX */
+.auth-panel {
+  width: 100%;
+  padding: 60px 40px;
+}
+
+.auth-dialog {
+  max-width: 420px;
+  margin: auto;
+}
