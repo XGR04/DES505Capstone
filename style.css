@@ -281,12 +281,6 @@ nav {
   text-align: center;
 }
 
-.subscription-section .section-label,
-.subscription-section h2,
-.subscription-section .section-intro {
-  color: #103522;
-}
-
 .subscription-section .section-label {
   font-size: 1.5rem;
 }
@@ -907,10 +901,6 @@ nav {
   font-weight: 500;
   margin: 6px 0 12px;
   color: var(--deep-green);
-}
-
-.floral-card p {
-  color: var(--text-soft);
 }
 
 /* FOOTER */

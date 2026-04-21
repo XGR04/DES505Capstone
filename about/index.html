@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About • Gentle Words</title>
 
+  <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" href="about-style.css">
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.typekit.net/amd7pdj.css">
@@ -17,33 +18,33 @@
     <a href="../index.html" class="logo">gentle words</a>
 
     <div class="nav-right">
-      <a href="../about/index.html">About Us</a>
-      <a href="../contact/index.html">Contact Us</a>
+<button type="button" class="subscribe-trigger subscribe-button">
+  Subscribe
+</button>
+  <a href="../about/index.html">About Us</a>
+  <a href="../contact/index.html">Contact Us</a>
+  
+  <div class="language-menu">
+    <button class="language-button" id="languageToggle" type="button">Language</button>
 
-      <div class="language-menu">
-        <button class="language-button" id="languageToggle" type="button">
-          Language
-        </button>
+    <ul class="language-panel" id="languagePanel">
+      <li><button type="button" data-lang="en">English</button></li>
+      <li><button type="button" data-lang="ar">Arabic</button></li>
+      <li><button type="button" data-lang="my">Burmese</button></li>
+      <li><button type="button" data-lang="hi">Hindi</button></li>
+      <li><button type="button" data-lang="id">Indonesian</button></li>
+      <li><button type="button" data-lang="ja">Japanese</button></li>
+      <li><button type="button" data-lang="ko">Korean</button></li>
+      <li><button type="button" data-lang="zh">Mandarin-Chinese</button></li>
+      <li><button type="button" data-lang="tl">Tagalog</button></li>
+      <li><button type="button" data-lang="th">Thai</button></li>
+      <li><button type="button" data-lang="vi">Vietnamese</button></li>
+    </ul>
+  </div>
 
-        <ul class="language-panel" id="languagePanel">
-          <li><button type="button" data-lang="en">English</button></li>
-          <li><button type="button" data-lang="ar">Arabic</button></li>
-          <li><button type="button" data-lang="my">Burmese</button></li>
-          <li><button type="button" data-lang="hi">Hindi</button></li>
-          <li><button type="button" data-lang="id">Indonesian</button></li>
-          <li><button type="button" data-lang="ja">Japanese</button></li>
-          <li><button type="button" data-lang="ko">Korean</button></li>
-          <li><button type="button" data-lang="zh">Mandarin-Chinese</button></li>
-          <li><button type="button" data-lang="tl">Tagalog</button></li>
-          <li><button type="button" data-lang="th">Thai</button></li>
-          <li><button type="button" data-lang="vi">Vietnamese</button></li>
-        </ul>
-      </div>
-
-      <a href="../signin/index.html" class="login-button">Sign Up/Log In</a>
-    </div>
+  <button class="login-button" id="openLogin" type="button">Log In</button>
+</div>
   </nav>
-
   <!-- HERO -->
   <section class="about-hero">
     <img class="about-hero-banner" src="../imgs/LeafBg.jpg" alt="About hero image">
@@ -223,6 +224,274 @@
 
     </div>
   </section>
+
+ <!-- SUBSCRIBE POPUP -->
+<div class="subscribe-modal" id="subscribeModal" aria-hidden="true">
+  <div class="subscribe-backdrop" id="subscribeBackdrop"></div>
+
+  <div class="subscribe-sheet" role="dialog" aria-modal="true" aria-labelledby="subscribeTitle">
+    <button class="subscribe-close" id="closeSubscribe" type="button" aria-label="Close">×</button>
+
+    <div class="subscribe-inner">
+
+  <!-- STEP 1 -->
+  <div class="onboard-step active" id="step1">
+    <p class="subscribe-eyebrow">Your Monthly Bear</p>
+    <h2>Start your journey to softer thinking</h2>
+
+    <p class="subscribe-copy">
+      For $5/month, receive a teddy and a gentle message to support reflection and emotional ease.
+    </p>
+
+    <div class="bear-preview">
+      <img src="../imgs/B1.png" alt="Teddy bear preview">
+    </div>
+
+    <button type="button" class="onboard-next" data-next="step2">Continue</button>
+  </div>
+
+
+  <!-- STEP 2 -->
+<div class="onboard-step" id="step2">
+  <p class="subscribe-eyebrow">Personalization</p>
+  <h2>Add a small touch</h2>
+
+  <p class="subscribe-copy">
+    Would you like your bear to include a random accessory?
+  </p>
+
+  <div class="option-group">
+    <button type="button" class="option-btn" data-value="yes">
+      Yes, surprise me
+    </button>
+
+    <button type="button" class="option-btn" data-value="no">
+      No, keep it simple
+    </button>
+  </div>
+
+  <div class="onboard-actions">
+    <button type="button" class="onboard-back" data-back="step1">
+      Back
+    </button>
+
+    <button type="button" class="onboard-next" data-next="step3">
+      Continue
+    </button>
+  </div>
+</div>
+
+  <!-- STEP 3 -->
+<div class="onboard-step" id="step3">
+  <p class="subscribe-eyebrow">Giving Back</p>
+  <h2>Support what matters to you</h2>
+
+  <p class="subscribe-copy">
+    If you’d like, choose a few causes your subscription can contribute to.
+    This step is completely optional.
+  </p>
+
+  <div class="cause-group">
+    <button type="button" class="cause-btn">Asian American Community Support</button>
+    <button type="button" class="cause-btn">Mental Health for Asian Immigrants</button>
+    <button type="button" class="cause-btn">Asian American Youth Support</button>
+    <button type="button" class="cause-btn">Cultural Healing</button>
+    <button type="button" class="cause-btn">Immigrant Family Support</button>
+    <button type="button" class="cause-btn">Language Access Resources</button>
+  </div>
+
+  <div class="custom-cause-wrap">
+    <label class="custom-cause-label">Or add your own (optional)</label>
+    <input
+      class="custom-cause-input"
+      type="text"
+      placeholder="Type your cause here"
+    >
+  </div>
+
+  <p class="cause-note">You can select up to 3, or skip this step.</p>
+
+  <div class="onboard-actions">
+    <button type="button" class="onboard-back" data-back="step2">Back</button>
+    <button type="button" class="onboard-next" data-next="step4">Continue</button>
+  </div>
+</div>
+
+<!-- STEP 4 -->
+<div class="onboard-step" id="step4">
+  <p class="subscribe-eyebrow">Message Preferences</p>
+  <h2>Choose how your tag is written</h2>
+
+  <p class="subscribe-copy">
+    Select the belief perspective and language you would like your bear’s message to reflect.
+  </p>
+
+  <div class="preference-block">
+    <label class="preference-label" for="beliefSelect">Belief / Perspective</label>
+    <select id="beliefSelect" class="preference-select">
+      <option value="">Choose one</option>
+      <option value="Buddhism">Buddhism</option>
+      <option value="Catholicism">Catholicism</option>
+      <option value="Christian">Christianity</option>
+      <option value="Confucianism">Confucianism</option>
+      <option value="Hinduism">Hinduism</option>
+      <option value="Islam">Islam</option>
+      <option value="Taoism">Taoism</option>
+      <option value="Shintoism">Shintoism</option>
+
+    </select>
+  </div>
+
+  <div class="preference-block">
+    <label class="preference-label" for="languageSelect">Tag Language</label>
+    <select id="languageSelect" class="preference-select">
+      <option value="">Choose one</option>
+      <option value="English">English</option>
+      <option value="Arabic">Arabic</option>
+      <option value="Burmese">Burmese</option>
+      <option value="Cantonese">Cantonese</option>
+      <option value="Hindi">Hindi</option>
+      <option value="Indonesian">Indonesian</option>
+      <option value="Japanese">Japanese</option>
+      <option value="Khmer">Khmer</option>
+      <option value="Korean">Korean</option>
+      <option value="Mandarin-Chinese">Mandarin-Chinese</option>
+      <option value="Tagalog">Tagalog</option>
+      <option value="Thai">Thai</option>
+      <option value="Vietnamese">Vietnamese</option>
+    </select>
+  </div>
+
+  <div class="onboard-actions">
+    <button type="button" class="onboard-back" data-back="step3">Back</button>
+    <button type="button" class="onboard-next" data-next="step5">Continue</button>
+  </div>
+</div>
+
+<!-- STEP 5 -->
+<div class="onboard-step" id="step5">
+  <p class="subscribe-eyebrow">Create Your Account</p>
+  <h2>Save your subscription</h2>
+
+  <p class="subscribe-copy">
+    Create your account to continue with your monthly teddy subscription.
+  </p>
+
+  <div class="signup-step-form">
+    <div class="signup-field">
+      <label for="signupNameStep">Name</label>
+      <input id="signupNameStep" type="text" placeholder="Enter your name">
+    </div>
+
+    <div class="signup-field">
+      <label for="signupEmailStep">Email</label>
+      <input id="signupEmailStep" type="email" placeholder="Enter your email">
+    </div>
+
+    <div class="signup-field">
+      <label for="signupPasswordStep">Password</label>
+      <input id="signupPasswordStep" type="password" placeholder="Create a password">
+    </div>
+
+    <div class="signup-field">
+      <label for="signupConfirmStep">Confirm Password</label>
+      <input id="signupConfirmStep" type="password" placeholder="Confirm your password">
+    </div>
+  </div>
+
+  <div class="onboard-actions">
+    <button type="button" class="onboard-back" data-back="step4">Back</button>
+    <button type="button" class="onboard-next" data-next="step6">Continue</button>
+  </div>
+</div>
+
+<!-- STEP 6 -->
+<div class="onboard-step" id="step6">
+  <p class="subscribe-eyebrow">Review</p>
+  <h2>You're all set</h2>
+
+  <p class="subscribe-copy">
+    You’re about to begin your Gentle Words subscription.
+    Each month, you’ll receive a teddy with a message designed to support reflection and softer thinking.
+  </p>
+
+  <div class="summary-box">
+    <p><strong>Subscription:</strong> $5 / month</p>
+    <p><strong>Includes:</strong> Monthly teddy + message</p>
+    <p><strong>Support:</strong> A portion goes to your selected causes</p>
+  </div>
+
+  <p class="final-note">
+    You can update your preferences anytime in your account.
+  </p>
+
+  <div class="onboard-actions">
+    <button type="button" class="onboard-back" data-back="step5">
+      Back
+    </button>
+
+    <button type="button" class="onboard-next confirm-button" data-next="step7">
+      Confirm Subscription
+    </button>
+  </div>
+</div>
+
+<!-- STEP 7 -->
+<div class="onboard-step success-step" id="step7">
+  <div class="success-icon">✓</div>
+
+  <p class="subscribe-eyebrow">Confirmed</p>
+  <h2>Your subscription is all set</h2>
+
+  <p class="subscribe-copy">
+    A confirmation email and next steps will be sent to your account.
+  </p>
+
+  <div class="onboard-actions success-actions">
+    <button type="button" class="confirm-button" id="closeSubscribeSuccess">
+      Done
+    </button>
+  </div>
+</div>
+
+</div>
+  </div>
+</div>
+
+  <!-- LOGIN POPUP -->
+<div class="auth-modal" id="authModal" aria-hidden="true">
+  <div class="auth-backdrop" id="authBackdrop"></div>
+
+  <div class="auth-dialog">
+    <button class="auth-close" id="closeAuth">×</button>
+
+    <div class="auth-panel">
+      <div class="auth-form-wrap">
+        <p class="auth-eyebrow">Welcome back</p>
+        <h2>Log In</h2>
+
+        <p class="auth-subtext">
+          Access your subscription, preferences, and reflections.
+        </p>
+
+        <form class="auth-form">
+          <label>Email</label>
+          <input type="email" placeholder="Enter your email">
+
+          <label>Password</label>
+          <input type="password" placeholder="Enter your password">
+
+          <div class="auth-links">
+            <a href="#">Forgot password?</a>
+          </div>
+
+          <button type="submit" class="auth-button">Log In</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</div>
 
   <footer>
     <p>&copy; 2026 Gentle Words. DES505 Capstone Project.</p>
