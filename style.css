@@ -223,6 +223,7 @@ nav {
   color: #103522;
   max-width: 400px;
   line-height: 1.5;
+  padding: 0px 0px 25px 0px;
 }
 
 .hero-actions {
@@ -234,6 +235,7 @@ nav {
 .hero-button {
   display: inline-block;
   padding: 12px 22px;
+  margin: 0px 150px;
   border-radius: 999px;
   text-decoration: none;
   transition: 0.25s ease;
@@ -1580,7 +1582,7 @@ body.auth-lock {
   color: var(--text-soft);
   margin-top: 10px;
   line-height: 1.6;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 /* =========================
@@ -1697,5 +1699,202 @@ body.subscribe-lock {
 
   .subscribe-inner h2 {
     font-size: 1.8rem;
+  }
+}
+
+.cause-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.cause-btn {
+  padding: 12px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(16, 53, 34, 0.2);
+  background: white;
+  color: var(--deep-green);
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.cause-btn.selected {
+  background: var(--deep-green);
+  color: white;
+}
+
+.cause-select {
+  margin-top: 12px;
+}
+
+.custom-cause-wrap {
+  margin-top: 24px;
+  width: 100%;
+  text-align: left;
+}
+
+.custom-cause-label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--deep-green);
+  font-size: 1rem;
+}
+
+.custom-cause-input {
+  width: 100%;
+  height: 52px;
+  border: 1px solid rgba(16, 53, 34, 0.14);
+  border-radius: 16px;
+  padding: 0 16px;
+  font: inherit;
+  color: var(--text);
+  background: white;
+}
+
+.custom-cause-input:focus {
+  outline: none;
+  border-color: rgba(16, 53, 34, 0.35);
+}
+
+.cause-note {
+  margin-top: 12px;
+  color: var(--text-soft);
+  font-size: 0.95rem;
+}
+
+.preference-block {
+  width: 100%;
+  margin-top: 24px;
+  text-align: left;
+}
+
+.preference-label {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--deep-green);
+  font-size: 1rem;
+}
+
+.preference-select {
+  width: 100%;
+  height: 52px;
+  border: 1px solid rgba(16, 53, 34, 0.14);
+  border-radius: 16px;
+  padding: 0 16px;
+  font: inherit;
+  color: var(--text);
+  background: white;
+}
+
+.preference-select:focus {
+  outline: none;
+  border-color: rgba(16, 53, 34, 0.35);
+}
+
+.signup-step-form {
+  width: 100%;
+  margin-top: 22px;
+}
+
+.signup-field {
+  text-align: left;
+  margin-bottom: 16px;
+}
+
+.signup-field label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--deep-green);
+  font-size: 1rem;
+}
+
+.signup-field input {
+  width: 100%;
+  height: 52px;
+  border: 1px solid rgba(16, 53, 34, 0.14);
+  border-radius: 16px;
+  padding: 0 16px;
+  font: inherit;
+  color: var(--text);
+  background: white;
+}
+
+.signup-field input:focus {
+  outline: none;
+  border-color: rgba(16, 53, 34, 0.35);
+}
+
+.summary-box {
+  margin-top: 20px;
+  padding: 18px;
+  border-radius: 16px;
+  background: rgba(16, 53, 34, 0.05);
+  text-align: left;
+  width: 100%;
+}
+
+.summary-box p {
+  margin: 6px 0;
+  color: var(--deep-green);
+}
+
+.final-note {
+  margin-top: 16px;
+  color: var(--text-soft);
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.confirm-button {
+  padding: 12px 22px;
+  border-radius: 999px;
+  border: none;
+  background: var(--deep-green);
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.confirm-button:hover {
+  opacity: 0.9;
+}
+
+.success-step {
+  text-align: center;
+}
+
+.success-icon {
+  width: 76px;
+  height: 76px;
+  margin: 0 auto 20px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(16, 53, 34, 0.08);
+  color: var(--deep-green);
+  font-size: 2rem;
+  font-weight: 700;
+  animation: popIn 0.45s ease;
+}
+
+.success-actions {
+  justify-content: center;
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.06);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
   }
 }

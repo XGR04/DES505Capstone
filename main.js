@@ -126,6 +126,52 @@ document.querySelectorAll(".option-btn").forEach(btn => {
   });
 });
 
+const causeButtons = document.querySelectorAll(".cause-btn");
+const maxCauses = 3;
+
+causeButtons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const selected = document.querySelectorAll(".cause-btn.selected");
+
+    if (btn.classList.contains("selected")) {
+      btn.classList.remove("selected");
+      return;
+    }
+
+    if (selected.length < maxCauses) {
+      btn.classList.add("selected");
+    }
+  });
+});
+
+/* =========================
+   SUCCESS STEP (STEP 7)
+========================= */
+
+const closeSubscribeSuccess = document.getElementById("closeSubscribeSuccess");
+
+if (closeSubscribeSuccess) {
+  closeSubscribeSuccess.addEventListener("click", () => {
+
+    // close modal
+    closeSubscribeModal();
+
+    // reset to step 1
+    showStep("step1");
+
+    // clear selected buttons
+    document.querySelectorAll(".option-btn, .cause-btn").forEach(btn => {
+      btn.classList.remove("selected");
+    });
+
+    // clear inputs
+    document.querySelectorAll(".preference-select, .custom-cause-input, .signup-field input").forEach(field => {
+      field.value = "";
+    });
+
+  });
+}
+
   /* =========================
      GLOBAL ESCAPE CLOSE
   ========================= */
