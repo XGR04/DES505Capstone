@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 :root {
@@ -29,8 +29,16 @@
 
 body {
   background:
-    radial-gradient(circle at top left, rgba(136, 154, 68, 0.08), transparent 30%),
-    radial-gradient(circle at top right, rgba(2, 98, 109, 0.06), transparent 28%),
+    radial-gradient(
+      circle at top left,
+      rgba(136, 154, 68, 0.08),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at top right,
+      rgba(2, 98, 109, 0.06),
+      transparent 28%
+    ),
     var(--bg);
   color: var(--text);
   line-height: 1.8;
@@ -416,51 +424,6 @@ nav {
 }
 
 /* mobile */
-@media (max-width: 980px) {
-  .subscription-section {
-    padding: 72px 0 88px;
-  }
-
-  .subscription-section .section-heading {
-    margin-bottom: 44px;
-  }
-
-  .subscription-steps::before {
-    display: none;
-  }
-
-  .step-card {
-    grid-template-columns: 1fr;
-    gap: 18px;
-    text-align: center;
-  }
-
-  .step-card::before {
-    position: static;
-    transform: none;
-    margin: 0 auto 4px;
-  }
-
-  .step-card:nth-child(odd) .step-image-wrap,
-  .step-card:nth-child(odd) .step-content,
-  .step-card:nth-child(even) .step-image-wrap,
-  .step-card:nth-child(even) .step-content {
-    grid-column: auto;
-  }
-
-  .step-content {
-    padding: 22px 22px;
-  }
-
-  .step-content p {
-    max-width: none;
-  }
-
-  .step-image {
-    max-width: 220px;
-    max-height: 180px;
-  }
-}
 
 /* PURPOSE */
 .purpose {
@@ -551,10 +514,7 @@ nav {
   padding: 150px 0px 250px 0px;
 
   background:
-    linear-gradient(
-      to right,
-      rgba(250, 246, 239, 0.1) 100%
-    ),
+    linear-gradient(to right, rgba(250, 246, 239, 0.1) 100%),
     url("imgs/flowerStrip.jpg");
 
   background-size: cover;
@@ -614,7 +574,6 @@ nav {
   );
 }
 
-
 .feature-layout {
   display: grid;
   grid-template-columns: 1.18fr 0.92fr;
@@ -652,7 +611,11 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(180deg, rgba(243, 230, 164, 0.16), rgba(255, 255, 255, 0.55));
+  background: linear-gradient(
+    180deg,
+    rgba(243, 230, 164, 0.16),
+    rgba(255, 255, 255, 0.55)
+  );
   border: 1px solid rgba(16, 53, 34, 0.06);
   color: #85756d;
   text-transform: lowercase;
@@ -918,227 +881,8 @@ footer p {
 }
 
 /* TABLET */
-@media (max-width: 980px) {
-  body {
-    padding: 0 28px 40px;
-  }
-
-  nav {
-    top: 12px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: calc(100% - 24px);
-    max-width: none;
-    padding: 16px 22px;
-    border-radius: 28px;
-  }
-
-  .home-hero {
-    min-height: 88vh;
-  }
-
-  .home-hero-image {
-    object-position: center center;
-  }
-
-  .home-hero-overlay {
-    min-height: 88vh;
-    justify-content: flex-end;
-    padding: 120px 36px 40px;
-    background: linear-gradient(
-      to top,
-      rgba(247, 242, 231, 0.18) 0%,
-      rgba(247, 242, 231, 0.42) 45%,
-      rgba(247, 242, 231, 0.82) 100%
-    );
-  }
-
-  .home-hero-text h1 {
-    font-size: 2.7rem;
-  }
-
-  .feature-layout,
-  .stories-layout,
-  .step-card,
-  .step-card:nth-child(even) {
-    grid-template-columns: 1fr;
-  }
-
-.subscription-steps {
-    gap: 28px;
-  }
-
-  .step-card {
-    grid-template-columns: 1fr;
-    gap: 18px;
-  }
-
-  .step-card:nth-child(even) .step-image-wrap,
-  .step-card:nth-child(even) .step-content {
-    order: unset;
-  }
-
-  .step-image {
-    max-width: 220px;
-    max-height: 200px;
-  }
-
-  .step-content {
-    min-height: unset;
-  }
-
-  .feature-side-card {
-    grid-template-columns: 110px 1fr;
-  }
-
-  .home-floral-band,
-  .home-floral-content {
-    min-height: 320px;
-  }
-
-  .home-floral-content {
-    padding-bottom: 90px;
-  }
-}
 
 /* MOBILE */
-@media (max-width: 640px) {
-  body {
-    padding: 0 18px 32px;
-  }
-
-  nav {
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: calc(100% - 20px);
-    max-width: none;
-    padding: 14px 18px;
-    border-radius: 24px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 14px;
-  }
-
-  .nav-right {
-    flex-wrap: wrap;
-    gap: 14px;
-  }
-
-  .home-hero {
-    min-height: 88vh;
-  }
-
-  .home-hero-image {
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center center;
-  }
-
-  .home-hero-overlay {
-    min-height: 88vh;
-    justify-content: flex-end;
-    align-items: flex-end;
-    padding: 120px 18px 36px;
-    background: linear-gradient(
-      to top,
-      rgba(247, 242, 231, 0.82) 0%,
-      rgba(247, 242, 231, 0.42) 42%,
-      rgba(247, 242, 231, 0.12) 100%
-    );
-  }
-
-  .home-hero-text {
-    max-width: 100%;
-    margin-right: 0;
-  }
-
-  .home-hero-text h1 {
-    font-size: 2.5rem;
-  }
-
-  .hero-kicker,
-  .hero-text,
-  .section-intro,
-  .feature-main-content p,
-  .feature-side-text p,
-  .step-card p,
-  .quote-subtext,
-  .featured-text,
-  .story-info p,
-  .floral-card p {
-    font-size: 0.95rem;
-  }
-
-  .section-heading h2,
-  .reflection-card h2,
-  .stories-heading-text h2,
-  .floral-card h2 {
-    font-size: 1.6rem;
-  }
-
-  .subscription-section,
-  .reflect-sec,
-  .feature-section,
-  .stories-section {
-    padding: 0 18px;
-    margin-top: 72px;
-  }
-
-  .feature-main-content,
-  .reflection-card,
-  .featured-content,
-  .floral-card {
-    padding: 22px;
-  }
-
-  .step-content {
-    padding: 22px 20px;
-    grid-template-columns: 40px 1fr;
-    gap: 14px;
-    border-radius: 22px;
-  }
-
-  .step-content h3 {
-    font-size: 1.15rem;
-  }
-
-  .step-content p {
-    font-size: 0.95rem;
-  }
-
-  .step-image {
-    max-width: 180px;
-    max-height: 160px;
-  }
-
-  .feature-side-card,
-  .story-item {
-    grid-template-columns: 1fr;
-  }
-
-  .feature-side-image,
-  .story-thumb-placeholder {
-    min-height: 160px;
-  }
-
-  .stories-heading {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .home-floral-band {
-    min-height: 280px;
-    margin-top: 72px;
-  }
-
-  .home-floral-content {
-    min-height: 280px;
-    padding: 36px 18px 70px;
-  }
-}
 
 /* =========================
    ONBOARDING STYLES
@@ -1169,7 +913,7 @@ footer p {
 .option-btn {
   padding: 12px 18px;
   border-radius: 999px;
-  border: 1px solid rgba(16,53,34,0.2);
+  border: 1px solid rgba(16, 53, 34, 0.2);
   background: white;
   cursor: pointer;
   transition: 0.2s;
@@ -1238,7 +982,9 @@ footer p {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: opacity 0.25s ease, visibility 0.25s ease;
+  transition:
+    opacity 0.25s ease,
+    visibility 0.25s ease;
   z-index: 4000;
 }
 
@@ -1317,28 +1063,6 @@ footer p {
 
 body.subscribe-lock {
   overflow: hidden;
-}
-
-@media (max-width: 640px) {
-  .subscribe-modal {
-    padding: 16px;
-    align-items: flex-start;
-  }
-
-  .subscribe-sheet {
-    width: 100%;
-    max-width: 100%;
-    margin-top: 24px;
-    margin-bottom: 24px;
-  }
-
-  .subscribe-inner {
-    padding: 64px 20px 28px;
-  }
-
-  .subscribe-inner h2 {
-    font-size: 1.8rem;
-  }
 }
 
 .cause-group {
@@ -1552,7 +1276,9 @@ body.subscribe-lock {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: opacity 0.25s ease, visibility 0.25s ease;
+  transition:
+    opacity 0.25s ease,
+    visibility 0.25s ease;
   z-index: 4500;
 }
 
@@ -1696,6 +1422,299 @@ body.subscribe-lock {
 
 body.auth-lock {
   overflow: hidden;
+}
+
+/* =========================
+   RESPONSIVE STYLES
+========================= */
+
+@media (max-width: 980px) {
+  .subscription-section {
+    padding: 72px 0 88px;
+  }
+
+  .subscription-section .section-heading {
+    margin-bottom: 44px;
+  }
+
+  .subscription-steps::before {
+    display: none;
+  }
+
+  .step-card {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    text-align: center;
+  }
+
+  .step-card::before {
+    position: static;
+    transform: none;
+    margin: 0 auto 4px;
+  }
+
+  .step-card:nth-child(odd) .step-image-wrap,
+  .step-card:nth-child(odd) .step-content,
+  .step-card:nth-child(even) .step-image-wrap,
+  .step-card:nth-child(even) .step-content {
+    grid-column: auto;
+  }
+
+  .step-content {
+    padding: 22px 22px;
+  }
+
+  .step-content p {
+    max-width: none;
+  }
+
+  .step-image {
+    max-width: 220px;
+    max-height: 180px;
+  }
+}
+
+@media (max-width: 980px) {
+  body {
+    padding: 0 28px 40px;
+  }
+
+  nav {
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 24px);
+    max-width: none;
+    padding: 16px 22px;
+    border-radius: 28px;
+  }
+
+  .home-hero {
+    min-height: 88vh;
+  }
+
+  .home-hero-image {
+    object-position: center center;
+  }
+
+  .home-hero-overlay {
+    min-height: 88vh;
+    justify-content: flex-end;
+    padding: 120px 36px 40px;
+    background: linear-gradient(
+      to top,
+      rgba(247, 242, 231, 0.18) 0%,
+      rgba(247, 242, 231, 0.42) 45%,
+      rgba(247, 242, 231, 0.82) 100%
+    );
+  }
+
+  .home-hero-text h1 {
+    font-size: 2.7rem;
+  }
+
+  .feature-layout,
+  .stories-layout,
+  .step-card,
+  .step-card:nth-child(even) {
+    grid-template-columns: 1fr;
+  }
+
+  .subscription-steps {
+    gap: 28px;
+  }
+
+  .step-card {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .step-card:nth-child(even) .step-image-wrap,
+  .step-card:nth-child(even) .step-content {
+    order: unset;
+  }
+
+  .step-image {
+    max-width: 220px;
+    max-height: 200px;
+  }
+
+  .step-content {
+    min-height: unset;
+  }
+
+  .feature-side-card {
+    grid-template-columns: 110px 1fr;
+  }
+
+  .home-floral-band,
+  .home-floral-content {
+    min-height: 320px;
+  }
+
+  .home-floral-content {
+    padding-bottom: 90px;
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    padding: 0 18px 32px;
+  }
+
+  nav {
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 20px);
+    max-width: none;
+    padding: 14px 18px;
+    border-radius: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .nav-right {
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .home-hero {
+    min-height: 88vh;
+  }
+
+  .home-hero-image {
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+
+  .home-hero-overlay {
+    min-height: 88vh;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 120px 18px 36px;
+    background: linear-gradient(
+      to top,
+      rgba(247, 242, 231, 0.82) 0%,
+      rgba(247, 242, 231, 0.42) 42%,
+      rgba(247, 242, 231, 0.12) 100%
+    );
+  }
+
+  .home-hero-text {
+    max-width: 100%;
+    margin-right: 0;
+  }
+
+  .home-hero-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-kicker,
+  .hero-text,
+  .section-intro,
+  .feature-main-content p,
+  .feature-side-text p,
+  .step-card p,
+  .quote-subtext,
+  .featured-text,
+  .story-info p,
+  .floral-card p {
+    font-size: 0.95rem;
+  }
+
+  .section-heading h2,
+  .reflection-card h2,
+  .stories-heading-text h2,
+  .floral-card h2 {
+    font-size: 1.6rem;
+  }
+
+  .subscription-section,
+  .reflect-sec,
+  .feature-section,
+  .stories-section {
+    padding: 0 18px;
+    margin-top: 72px;
+  }
+
+  .feature-main-content,
+  .reflection-card,
+  .featured-content,
+  .floral-card {
+    padding: 22px;
+  }
+
+  .step-content {
+    padding: 22px 20px;
+    grid-template-columns: 40px 1fr;
+    gap: 14px;
+    border-radius: 22px;
+  }
+
+  .step-content h3 {
+    font-size: 1.15rem;
+  }
+
+  .step-content p {
+    font-size: 0.95rem;
+  }
+
+  .step-image {
+    max-width: 180px;
+    max-height: 160px;
+  }
+
+  .feature-side-card,
+  .story-item {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-side-image,
+  .story-thumb-placeholder {
+    min-height: 160px;
+  }
+
+  .stories-heading {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .home-floral-band {
+    min-height: 280px;
+    margin-top: 72px;
+  }
+
+  .home-floral-content {
+    min-height: 280px;
+    padding: 36px 18px 70px;
+  }
+}
+
+@media (max-width: 640px) {
+  .subscribe-modal {
+    padding: 16px;
+    align-items: flex-start;
+  }
+
+  .subscribe-sheet {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+
+  .subscribe-inner {
+    padding: 64px 20px 28px;
+  }
+
+  .subscribe-inner h2 {
+    font-size: 1.8rem;
+  }
 }
 
 @media (max-width: 640px) {

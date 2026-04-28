@@ -1,593 +1,701 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gentle Words</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gentle Words</title>
 
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.typekit.net/amd7pdj.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://use.typekit.net/amd7pdj.css" />
+  </head>
 
-<body>
+  <body>
+    <!-- NAV -->
+    <nav>
+      <a href="index.html" class="logo">gentle words</a>
 
-  <!-- NAV -->
-  <nav>
-    <a href="index.html" class="logo">gentle words</a>
+      <div class="nav-right">
+        <button type="button" class="subscribe-trigger subscribe-button">
+          Subscribe
+        </button>
+        <a href="about/index.html">About Us</a>
+        <a href="contact/index.html">Contact Us</a>
 
-    <div class="nav-right">
-<button type="button" class="subscribe-trigger subscribe-button">
-  Subscribe
-</button>
-  <a href="about/index.html">About Us</a>
-  <a href="contact/index.html">Contact Us</a>
-  
-  <div class="language-menu">
-    <button class="language-button" id="languageToggle" type="button">Language</button>
+        <div class="language-menu">
+          <button class="language-button" id="languageToggle" type="button">
+            Language
+          </button>
 
-    <ul class="language-panel" id="languagePanel">
-      <li><button type="button" data-lang="en">English</button></li>
-      <li><button type="button" data-lang="ar">Arabic</button></li>
-      <li><button type="button" data-lang="my">Burmese</button></li>
-      <li><button type="button" data-lang="hi">Hindi</button></li>
-      <li><button type="button" data-lang="id">Indonesian</button></li>
-      <li><button type="button" data-lang="ja">Japanese</button></li>
-      <li><button type="button" data-lang="ko">Korean</button></li>
-      <li><button type="button" data-lang="zh">Mandarin-Chinese</button></li>
-      <li><button type="button" data-lang="tl">Tagalog</button></li>
-      <li><button type="button" data-lang="th">Thai</button></li>
-      <li><button type="button" data-lang="vi">Vietnamese</button></li>
-    </ul>
-  </div>
-
-  <button class="login-button" id="openLogin" type="button">Log In</button>
-</div>
-  </nav>
-
-  <main>
-
-    <!-- HERO -->
-<section class="home-hero">
-  <img class="home-hero-image" src="imgs/bearHBG.png" alt="Gentle Words hero image">
-
-  <div class="home-hero-overlay">
-    <div class="home-hero-text">
-      <p class="hero-kicker">Faith, Reflection, and Gentle Support</p>
-      <h1>Words can stay with us. <span>So we choose to make them</span> gentler.</h1>
-      <p class="hero-text">
-        A $5 monthly subscription includes a teddy bear with a rephrased message to encourage softer thinking while also contributing to a charitable cause of your choice.
-      </p>
-
-      <button type="button" class="subscribe-trigger hero-button">
-  Get Started
-</button>
-    </div>
-  </div>
-</section>
-
-    <!-- PURPOSE/GOAL -->
-<section class="purpose">
-  <div class="gentle-wrap">
-    <div class="purpose-content">
-      <p class="label">PURPOSE</p>
-
-      <p class="intro">
-        Gentle Words exists to reframe those moments.
-        Through small, intentional changes in language, 
-        we create space for understanding instead of pressure,
-        and care instead of silence.
-      </p>
-
-      <div class="title-decor">
-        <img src="imgs/BearDec.II.png" alt="decor">
-      </div>
-
-      <p class="sub">
-        And with every teddy, a portion goes toward a charitable cause — extending that care beyond you.
-      </p>
-    </div>
-  </div>
-</section>
-
-    <!-- SUBSCRIPTION -->
-    <section class="subscription-section">
-      <div class="page-width">
-        <div class="section-heading">
-          <h2 class="section-label">How It Works</h2>
-          <p class="section-intro">
-            The subscription provides a monthly reminder through gentle messages and reflections to help people heal, grow, and be kinder to themselves.
-          </p>
+          <ul class="language-panel" id="languagePanel">
+            <li><button type="button" data-lang="en">English</button></li>
+            <li><button type="button" data-lang="ar">Arabic</button></li>
+            <li><button type="button" data-lang="my">Burmese</button></li>
+            <li><button type="button" data-lang="hi">Hindi</button></li>
+            <li><button type="button" data-lang="id">Indonesian</button></li>
+            <li><button type="button" data-lang="ja">Japanese</button></li>
+            <li><button type="button" data-lang="ko">Korean</button></li>
+            <li>
+              <button type="button" data-lang="zh">Mandarin-Chinese</button>
+            </li>
+            <li><button type="button" data-lang="tl">Tagalog</button></li>
+            <li><button type="button" data-lang="th">Thai</button></li>
+            <li><button type="button" data-lang="vi">Vietnamese</button></li>
+          </ul>
         </div>
 
-        <div class="subscription-layout">
-          <div class="subscription-steps">
-            <article class="step-card">
-              <div class="step-image-wrap">
-                <img class="step-image" src="imgs/Comp.png" alt="Step one illustration">
-              </div>
-              <div class="step-content">
-                <p>
-                  Create an account and subscribe to receive a monthly teddy bear and access to more of the website's resources.
-                </p>
-              </div>
-            </article>
+        <button class="login-button" id="openLogin" type="button">
+          Log In
+        </button>
+      </div>
+    </nav>
 
-            <article class="step-card">
-              <div class="step-image-wrap">
-                <img class="step-image" src="imgs/TB.png" alt="Step two illustration">
-              </div>
-              <div class="step-content">
-                <p>
-                  Receive a teddy bear with a tag that discusses the weekly phrase and a faith-based reflection.
-                </p>
-              </div>
-            </article>
+    <main>
+      <!-- HERO -->
+      <section class="home-hero">
+        <img
+          class="home-hero-image"
+          src="imgs/bearHBG.png"
+          alt="Gentle Words hero image"
+        />
 
-            <article class="step-card">
-              <div class="step-image-wrap">
-                <img class="step-image" src="imgs/Care.png" alt="Step three illustration">
-              </div>
-              <div class="step-content">
-                <p>
-                  Reflect, learn, and use the website for deeper context and resources.
-                </p>
-              </div>
-            </article>
+        <div class="home-hero-overlay">
+          <div class="home-hero-text">
+            <p class="hero-kicker">Faith, Reflection, and Gentle Support</p>
+            <h1>
+              Words can stay with us.
+              <span>So we choose to make them</span> gentler.
+            </h1>
+            <p class="hero-text">
+              A $5 monthly subscription includes a teddy bear with a rephrased
+              message to encourage softer thinking while also contributing to a
+              charitable cause of your choice.
+            </p>
+
+            <button type="button" class="subscribe-trigger hero-button">
+              Get Started
+            </button>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- QUOTE + DAILY REFLECTION -->
-    <section class="reflect-sec">
-      <div class="page-width">
-        <div class="reflection-card">
-          <p class="section-label">Daily Reflection Quotes</p>
+      <!-- PURPOSE/GOAL -->
+      <section class="purpose">
+        <div class="gentle-wrap">
+          <div class="purpose-content">
+            <p class="label">PURPOSE</p>
 
-          <blockquote class="quote-text">
-            “You do not have to carry everything at once. Growth can be quiet, gentle, and still meaningful.”
-          </blockquote>
+            <p class="intro">
+              Gentle Words exists to reframe those moments. Through small,
+              intentional changes in language, we create space for understanding
+              instead of pressure, and care instead of silence.
+            </p>
 
-          <p class="quote-subtext">
-            A space for thoughtful words that bring comfort, clarity, and calm.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- FEATURED SERVICES / EVENTS -->
-    <section class="feature-section">
-      <div class="page-width">
-        <div class="section-heading">
-          <p class="section-label">Support and Community</p>
-          <h2>Services and Events</h2>
-        </div>
-
-        <div class="feature-layout">
-          <div class="feature-main-card">
-            <div class="feature-main-image-wrap">
-              <div class="feature-main-image">featured image</div>
+            <div class="title-decor">
+              <img src="imgs/BearDec.II.png" alt="decor" />
             </div>
 
-            <div class="feature-main-content">
-              <h3>Gentle Reflection Sessions</h3>
-              <p>
-                Small guided spaces where individuals can pause, reflect, and unpack emotions in a calm, non-judgmental environment.
-              </p>
+            <p class="sub">
+              And with every teddy, a portion goes toward a charitable cause —
+              extending that care beyond you.
+            </p>
+          </div>
+        </div>
+      </section>
 
-              <a href="#" class="feature-link">Learn More</a>
+      <!-- SUBSCRIPTION -->
+      <section class="subscription-section">
+        <div class="page-width">
+          <div class="section-heading">
+            <h2 class="section-label">How It Works</h2>
+            <p class="section-intro">
+              The subscription provides a monthly reminder through gentle
+              messages and reflections to help people heal, grow, and be kinder
+              to themselves.
+            </p>
+          </div>
+
+          <div class="subscription-layout">
+            <div class="subscription-steps">
+              <article class="step-card">
+                <div class="step-image-wrap">
+                  <img
+                    class="step-image"
+                    src="imgs/Comp.png"
+                    alt="Step one illustration"
+                  />
+                </div>
+                <div class="step-content">
+                  <p>
+                    Create an account and subscribe to receive a monthly teddy
+                    bear and access to more of the website's resources.
+                  </p>
+                </div>
+              </article>
+
+              <article class="step-card">
+                <div class="step-image-wrap">
+                  <img
+                    class="step-image"
+                    src="imgs/TB.png"
+                    alt="Step two illustration"
+                  />
+                </div>
+                <div class="step-content">
+                  <p>
+                    Receive a teddy bear with a tag that discusses the weekly
+                    phrase and a faith-based reflection.
+                  </p>
+                </div>
+              </article>
+
+              <article class="step-card">
+                <div class="step-image-wrap">
+                  <img
+                    class="step-image"
+                    src="imgs/Care.png"
+                    alt="Step three illustration"
+                  />
+                </div>
+                <div class="step-content">
+                  <p>
+                    Reflect, learn, and use the website for deeper context and
+                    resources.
+                  </p>
+                </div>
+              </article>
             </div>
           </div>
+        </div>
+      </section>
 
-          <div class="feature-side-list">
-            <article class="feature-side-card">
-              <div class="feature-side-image-wrap">
-                <div class="feature-side-image">image</div>
-              </div>
-              <div class="feature-side-text">
-                <h4>Cultural Healing Circles</h4>
-                <p>
-                  Community-based conversations centered around shared Asian cultural experiences.
-                </p>
-              </div>
-            </article>
+      <!-- QUOTE + DAILY REFLECTION -->
+      <section class="reflect-sec">
+        <div class="page-width">
+          <div class="reflection-card">
+            <p class="section-label">Daily Reflection Quotes</p>
 
-            <article class="feature-side-card">
-              <div class="feature-side-image-wrap">
-                <div class="feature-side-image">image</div>
-              </div>
-              <div class="feature-side-text">
-                <h4>Faith and Mindfulness Guidance</h4>
-                <p>
-                  Gentle spiritual reflections paired with grounding practices and stillness.
-                </p>
-              </div>
-            </article>
+            <blockquote class="quote-text">
+              “You do not have to carry everything at once. Growth can be quiet,
+              gentle, and still meaningful.”
+            </blockquote>
 
-            <article class="feature-side-card">
-              <div class="feature-side-image-wrap">
-                <div class="feature-side-image">image</div>
-              </div>
-              <div class="feature-side-text">
-                <h4>Monthly Gentle Words Gatherings</h4>
-                <p>
-                  Quiet, welcoming gatherings centered around rest, identity, forgiveness, and growth.
-                </p>
-              </div>
-            </article>
+            <p class="quote-subtext">
+              A space for thoughtful words that bring comfort, clarity, and
+              calm.
+            </p>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="greenstrip">
-      <div class="stripagain">
-        <img class="stripImg" src="imgs/strip.GF.png" alt="leaf strip">
-      </div>
-    </section>
-
-    <!-- STORIES -->
-    <section class="stories-section">
-      <div class="page-width">
-        <div class="section-heading stories-heading">
-          <div class="stories-heading-text">
-            <p class="section-label">Shared Reflection</p>
-            <h2>Latest Stories</h2>
+      <!-- FEATURED SERVICES / EVENTS -->
+      <section class="feature-section">
+        <div class="page-width">
+          <div class="section-heading">
+            <p class="section-label">Support and Community</p>
+            <h2>Services and Events</h2>
           </div>
-          <a href="#" class="stories-button">View More</a>
-        </div>
 
-        <div class="stories-layout">
-          <article class="featured-story">
-            <div class="featured-image-wrap">
-              <div class="featured-image-placeholder">large image placeholder</div>
+          <div class="feature-layout">
+            <div class="feature-main-card">
+              <div class="feature-main-image-wrap">
+                <div class="feature-main-image">featured image</div>
+              </div>
+
+              <div class="feature-main-content">
+                <h3>Gentle Reflection Sessions</h3>
+                <p>
+                  Small guided spaces where individuals can pause, reflect, and
+                  unpack emotions in a calm, non-judgmental environment.
+                </p>
+
+                <a href="#" class="feature-link">Learn More</a>
+              </div>
             </div>
 
-            <div class="featured-content">
-              <h3>I Thought Being Strong Meant Staying Silent</h3>
-              <p class="featured-meta">Personal Reflection • April 2026</p>
-              <p class="featured-text">
-                Growing up, I was taught that keeping things to myself was a form of strength. It wasn't until I reached burnout that I realized silence wasn't protecting me — it was isolating me.
-              </p>
-              <p class="featured-text">
-                Through small conversations and gentle reminders, I learned that expressing emotions isn't weakness. It's honesty.
-              </p>
+            <div class="feature-side-list">
+              <article class="feature-side-card">
+                <div class="feature-side-image-wrap">
+                  <div class="feature-side-image">image</div>
+                </div>
+                <div class="feature-side-text">
+                  <h4>Cultural Healing Circles</h4>
+                  <p>
+                    Community-based conversations centered around shared Asian
+                    cultural experiences.
+                  </p>
+                </div>
+              </article>
+
+              <article class="feature-side-card">
+                <div class="feature-side-image-wrap">
+                  <div class="feature-side-image">image</div>
+                </div>
+                <div class="feature-side-text">
+                  <h4>Faith and Mindfulness Guidance</h4>
+                  <p>
+                    Gentle spiritual reflections paired with grounding practices
+                    and stillness.
+                  </p>
+                </div>
+              </article>
+
+              <article class="feature-side-card">
+                <div class="feature-side-image-wrap">
+                  <div class="feature-side-image">image</div>
+                </div>
+                <div class="feature-side-text">
+                  <h4>Monthly Gentle Words Gatherings</h4>
+                  <p>
+                    Quiet, welcoming gatherings centered around rest, identity,
+                    forgiveness, and growth.
+                  </p>
+                </div>
+              </article>
             </div>
-          </article>
-
-          <div class="story-list">
-            <article class="story-item">
-              <div class="story-thumb-wrap">
-                <div class="story-thumb-placeholder">image</div>
-              </div>
-              <div class="story-info">
-                <h4>Learning to Rest Without Guilt</h4>
-                <p>
-                  For years, I felt like resting meant falling behind. Now, I see it as part of moving forward.
-                </p>
-              </div>
-            </article>
-
-            <article class="story-item">
-              <div class="story-thumb-wrap">
-                <div class="story-thumb-placeholder">image</div>
-              </div>
-              <div class="story-info">
-                <h4>Healing Doesn't Always Look Like Progress</h4>
-                <p>
-                  Some days feel like setbacks. But sometimes, just staying present is enough.
-                </p>
-              </div>
-            </article>
-
-            <article class="story-item">
-              <div class="story-thumb-wrap">
-                <div class="story-thumb-placeholder">image</div>
-              </div>
-              <div class="story-info">
-                <h4>My Parents Never Talked About Feelings</h4>
-                <p>
-                  Understanding emotions wasn't something I grew up with. But it's something I'm slowly allowing myself to explore.
-                </p>
-              </div>
-            </article>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- FLORAL BAND -->
-    <section class="home-floral-band">
-      <img src="imgs/flowGBG.png" alt="Floral background">
-
-      <div class="home-floral-content">
-        <div class="floral-card">
-          <p class="section-label">A Gentle Reminder</p>
-          <h2>Growth can still be soft.</h2>
-          <p>
-            This space was created to hold reflection, faith, and emotional care together.
-            Take your time here.
-          </p>
+      <section class="greenstrip">
+        <div class="stripagain">
+          <img class="stripImg" src="imgs/strip.GF.png" alt="leaf strip" />
         </div>
-      </div>
-    </section>
+      </section>
 
-  </main>
+      <!-- STORIES -->
+      <section class="stories-section">
+        <div class="page-width">
+          <div class="section-heading stories-heading">
+            <div class="stories-heading-text">
+              <p class="section-label">Shared Reflection</p>
+              <h2>Latest Stories</h2>
+            </div>
+            <a href="#" class="stories-button">View More</a>
+          </div>
 
-  
+          <div class="stories-layout">
+            <article class="featured-story">
+              <div class="featured-image-wrap">
+                <div class="featured-image-placeholder">
+                  large image placeholder
+                </div>
+              </div>
+
+              <div class="featured-content">
+                <h3>I Thought Being Strong Meant Staying Silent</h3>
+                <p class="featured-meta">Personal Reflection • April 2026</p>
+                <p class="featured-text">
+                  Growing up, I was taught that keeping things to myself was a
+                  form of strength. It wasn't until I reached burnout that I
+                  realized silence wasn't protecting me — it was isolating me.
+                </p>
+                <p class="featured-text">
+                  Through small conversations and gentle reminders, I learned
+                  that expressing emotions isn't weakness. It's honesty.
+                </p>
+              </div>
+            </article>
+
+            <div class="story-list">
+              <article class="story-item">
+                <div class="story-thumb-wrap">
+                  <div class="story-thumb-placeholder">image</div>
+                </div>
+                <div class="story-info">
+                  <h4>Learning to Rest Without Guilt</h4>
+                  <p>
+                    For years, I felt like resting meant falling behind. Now, I
+                    see it as part of moving forward.
+                  </p>
+                </div>
+              </article>
+
+              <article class="story-item">
+                <div class="story-thumb-wrap">
+                  <div class="story-thumb-placeholder">image</div>
+                </div>
+                <div class="story-info">
+                  <h4>Healing Doesn't Always Look Like Progress</h4>
+                  <p>
+                    Some days feel like setbacks. But sometimes, just staying
+                    present is enough.
+                  </p>
+                </div>
+              </article>
+
+              <article class="story-item">
+                <div class="story-thumb-wrap">
+                  <div class="story-thumb-placeholder">image</div>
+                </div>
+                <div class="story-info">
+                  <h4>My Parents Never Talked About Feelings</h4>
+                  <p>
+                    Understanding emotions wasn't something I grew up with. But
+                    it's something I'm slowly allowing myself to explore.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FLORAL BAND -->
+      <section class="home-floral-band">
+        <img src="imgs/flowGBG.png" alt="Floral background" />
+
+        <div class="home-floral-content">
+          <div class="floral-card">
+            <p class="section-label">A Gentle Reminder</p>
+            <h2>Growth can still be soft.</h2>
+            <p>
+              This space was created to hold reflection, faith, and emotional
+              care together. Take your time here.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
     <!-- SUBSCRIBE POPUP -->
-<div class="subscribe-modal" id="subscribeModal" aria-hidden="true">
-  <div class="subscribe-backdrop" id="subscribeBackdrop"></div>
+    <div class="subscribe-modal" id="subscribeModal" aria-hidden="true">
+      <div class="subscribe-backdrop" id="subscribeBackdrop"></div>
 
-  <div class="subscribe-sheet" role="dialog" aria-modal="true" aria-labelledby="subscribeTitle">
-    <button class="subscribe-close" id="closeSubscribe" type="button" aria-label="Close">×</button>
+      <div
+        class="subscribe-sheet"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="subscribeTitle"
+      >
+        <button
+          class="subscribe-close"
+          id="closeSubscribe"
+          type="button"
+          aria-label="Close"
+        >
+          ×
+        </button>
 
-    <div class="subscribe-inner">
+        <div class="subscribe-inner">
+          <!-- STEP 1 -->
+          <div class="onboard-step active" id="step1">
+            <p class="subscribe-eyebrow">Your Monthly Bear</p>
+            <h2>Start your journey to softer thinking</h2>
 
-  <!-- STEP 1 -->
-  <div class="onboard-step active" id="step1">
-    <p class="subscribe-eyebrow">Your Monthly Bear</p>
-    <h2>Start your journey to softer thinking</h2>
+            <p class="subscribe-copy">
+              For $5/month, receive a teddy and a gentle message to support
+              reflection and emotional ease.
+            </p>
 
-    <p class="subscribe-copy">
-      For $5/month, receive a teddy and a gentle message to support reflection and emotional ease.
-    </p>
+            <div class="bear-preview">
+              <img src="imgs/B1.png" alt="Teddy bear preview" />
+            </div>
 
-    <div class="bear-preview">
-      <img src="imgs/B1.png" alt="Teddy bear preview">
-    </div>
-
-    <button type="button" class="onboard-next" data-next="step2">Continue</button>
-  </div>
-
-
-  <!-- STEP 2 -->
-<div class="onboard-step" id="step2">
-  <p class="subscribe-eyebrow">Personalization</p>
-  <h2>Add a small touch</h2>
-
-  <p class="subscribe-copy">
-    Would you like your bear to include a random accessory?
-  </p>
-
-  <div class="option-group">
-    <button type="button" class="option-btn" data-value="yes">
-      Yes, surprise me
-    </button>
-
-    <button type="button" class="option-btn" data-value="no">
-      No, keep it simple
-    </button>
-  </div>
-
-  <div class="onboard-actions">
-    <button type="button" class="onboard-back" data-back="step1">
-      Back
-    </button>
-
-    <button type="button" class="onboard-next" data-next="step3">
-      Continue
-    </button>
-  </div>
-</div>
-
-  <!-- STEP 3 -->
-<div class="onboard-step" id="step3">
-  <p class="subscribe-eyebrow">Giving Back</p>
-  <h2>Support what matters to you</h2>
-
-  <p class="subscribe-copy">
-    If you’d like, choose a few causes your subscription can contribute to.
-    This step is completely optional.
-  </p>
-
-  <div class="cause-group">
-    <button type="button" class="cause-btn">Asian American Community Support</button>
-    <button type="button" class="cause-btn">Mental Health for Asian Immigrants</button>
-    <button type="button" class="cause-btn">Asian American Youth Support</button>
-    <button type="button" class="cause-btn">Cultural Healing</button>
-    <button type="button" class="cause-btn">Immigrant Family Support</button>
-    <button type="button" class="cause-btn">Language Access Resources</button>
-  </div>
-
-  <div class="custom-cause-wrap">
-    <label class="custom-cause-label">Or add your own (optional)</label>
-    <input
-      class="custom-cause-input"
-      type="text"
-      placeholder="Type your cause here"
-    >
-  </div>
-
-  <p class="cause-note">You can select up to 3, or skip this step.</p>
-
-  <div class="onboard-actions">
-    <button type="button" class="onboard-back" data-back="step2">Back</button>
-    <button type="button" class="onboard-next" data-next="step4">Continue</button>
-  </div>
-</div>
-
-<!-- STEP 4 -->
-<div class="onboard-step" id="step4">
-  <p class="subscribe-eyebrow">Message Preferences</p>
-  <h2>Choose how your tag is written</h2>
-
-  <p class="subscribe-copy">
-    Select the belief perspective and language you would like your bear’s message to reflect.
-  </p>
-
-  <div class="preference-block">
-    <label class="preference-label" for="beliefSelect">Belief / Perspective</label>
-    <select id="beliefSelect" class="preference-select">
-      <option value="">Choose one</option>
-      <option value="Buddhism">Buddhism</option>
-      <option value="Catholicism">Catholicism</option>
-      <option value="Christian">Christianity</option>
-      <option value="Confucianism">Confucianism</option>
-      <option value="Hinduism">Hinduism</option>
-      <option value="Islam">Islam</option>
-      <option value="Taoism">Taoism</option>
-      <option value="Shintoism">Shintoism</option>
-
-    </select>
-  </div>
-
-  <div class="preference-block">
-    <label class="preference-label" for="languageSelect">Tag Language</label>
-    <select id="languageSelect" class="preference-select">
-      <option value="">Choose one</option>
-      <option value="English">English</option>
-      <option value="Arabic">Arabic</option>
-      <option value="Burmese">Burmese</option>
-      <option value="Cantonese">Cantonese</option>
-      <option value="Hindi">Hindi</option>
-      <option value="Indonesian">Indonesian</option>
-      <option value="Japanese">Japanese</option>
-      <option value="Khmer">Khmer</option>
-      <option value="Korean">Korean</option>
-      <option value="Mandarin-Chinese">Mandarin-Chinese</option>
-      <option value="Tagalog">Tagalog</option>
-      <option value="Thai">Thai</option>
-      <option value="Vietnamese">Vietnamese</option>
-    </select>
-  </div>
-
-  <div class="onboard-actions">
-    <button type="button" class="onboard-back" data-back="step3">Back</button>
-    <button type="button" class="onboard-next" data-next="step5">Continue</button>
-  </div>
-</div>
-
-<!-- STEP 5 -->
-<div class="onboard-step" id="step5">
-  <p class="subscribe-eyebrow">Create Your Account</p>
-  <h2>Save your subscription</h2>
-
-  <p class="subscribe-copy">
-    Create your account to continue with your monthly teddy subscription.
-  </p>
-
-  <div class="signup-step-form">
-    <div class="signup-field">
-      <label for="signupNameStep">Name</label>
-      <input id="signupNameStep" type="text" placeholder="Enter your name">
-    </div>
-
-    <div class="signup-field">
-      <label for="signupEmailStep">Email</label>
-      <input id="signupEmailStep" type="email" placeholder="Enter your email">
-    </div>
-
-    <div class="signup-field">
-      <label for="signupPasswordStep">Password</label>
-      <input id="signupPasswordStep" type="password" placeholder="Create a password">
-    </div>
-
-    <div class="signup-field">
-      <label for="signupConfirmStep">Confirm Password</label>
-      <input id="signupConfirmStep" type="password" placeholder="Confirm your password">
-    </div>
-  </div>
-
-  <div class="onboard-actions">
-    <button type="button" class="onboard-back" data-back="step4">Back</button>
-    <button type="button" class="onboard-next" data-next="step6">Continue</button>
-  </div>
-</div>
-
-<!-- STEP 6 -->
-<div class="onboard-step" id="step6">
-  <p class="subscribe-eyebrow">Review</p>
-  <h2>You're all set</h2>
-
-  <p class="subscribe-copy">
-    You’re about to begin your Gentle Words subscription.
-    Each month, you’ll receive a teddy with a message designed to support reflection and softer thinking.
-  </p>
-
-  <div class="summary-box">
-    <p><strong>Subscription:</strong> $5 / month</p>
-    <p><strong>Includes:</strong> Monthly teddy + message</p>
-    <p><strong>Support:</strong> A portion goes to your selected causes</p>
-  </div>
-
-  <p class="final-note">
-    You can update your preferences anytime in your account.
-  </p>
-
-  <div class="onboard-actions">
-    <button type="button" class="onboard-back" data-back="step5">
-      Back
-    </button>
-
-    <button type="button" class="onboard-next confirm-button" data-next="step7">
-      Confirm Subscription
-    </button>
-  </div>
-</div>
-
-<!-- STEP 7 -->
-<div class="onboard-step success-step" id="step7">
-  <div class="success-icon">✓</div>
-
-  <p class="subscribe-eyebrow">Confirmed</p>
-  <h2>Your subscription is all set</h2>
-
-  <p class="subscribe-copy">
-    A confirmation email and next steps will be sent to your account.
-  </p>
-
-  <div class="onboard-actions success-actions">
-    <button type="button" class="confirm-button" id="closeSubscribeSuccess">
-      Done
-    </button>
-  </div>
-</div>
-
-</div>
-  </div>
-</div>
-
-<!-- LOGIN POPUP -->
-<div class="auth-modal" id="authModal" aria-hidden="true">
-  <div class="auth-backdrop" id="authBackdrop"></div>
-
-  <div class="auth-dialog">
-    <button class="auth-close" id="closeAuth">×</button>
-
-    <div class="auth-panel">
-      <div class="auth-form-wrap">
-        <h2>Log In</h2>
-
-        <form class="auth-form">
-          <label>Email</label>
-          <input type="email" placeholder="Enter your email">
-
-          <label>Password</label>
-          <input type="password" placeholder="Enter your password">
-
-          <div class="auth-links">
-            <a href="#">Forgot password?</a>
+            <button type="button" class="onboard-next" data-next="step2">
+              Continue
+            </button>
           </div>
 
-          <button type="submit" class="auth-button">Log In</button>
-        </form>
+          <!-- STEP 2 -->
+          <div class="onboard-step" id="step2">
+            <p class="subscribe-eyebrow">Personalization</p>
+            <h2>Add a small touch</h2>
+
+            <p class="subscribe-copy">
+              Would you like your bear to include a random accessory?
+            </p>
+
+            <div class="option-group">
+              <button type="button" class="option-btn" data-value="yes">
+                Yes, surprise me
+              </button>
+
+              <button type="button" class="option-btn" data-value="no">
+                No, keep it simple
+              </button>
+            </div>
+
+            <div class="onboard-actions">
+              <button type="button" class="onboard-back" data-back="step1">
+                Back
+              </button>
+
+              <button type="button" class="onboard-next" data-next="step3">
+                Continue
+              </button>
+            </div>
+          </div>
+
+          <!-- STEP 3 -->
+          <div class="onboard-step" id="step3">
+            <p class="subscribe-eyebrow">Giving Back</p>
+            <h2>Support what matters to you</h2>
+
+            <p class="subscribe-copy">
+              If you’d like, choose a few causes your subscription can
+              contribute to. This step is completely optional.
+            </p>
+
+            <div class="cause-group">
+              <button type="button" class="cause-btn">
+                Asian American Community Support
+              </button>
+              <button type="button" class="cause-btn">
+                Mental Health for Asian Immigrants
+              </button>
+              <button type="button" class="cause-btn">
+                Asian American Youth Support
+              </button>
+              <button type="button" class="cause-btn">Cultural Healing</button>
+              <button type="button" class="cause-btn">
+                Immigrant Family Support
+              </button>
+              <button type="button" class="cause-btn">
+                Language Access Resources
+              </button>
+            </div>
+
+            <div class="custom-cause-wrap">
+              <label class="custom-cause-label"
+                >Or add your own (optional)</label
+              >
+              <input
+                class="custom-cause-input"
+                type="text"
+                placeholder="Type your cause here"
+              />
+            </div>
+
+            <p class="cause-note">You can select up to 3, or skip this step.</p>
+
+            <div class="onboard-actions">
+              <button type="button" class="onboard-back" data-back="step2">
+                Back
+              </button>
+              <button type="button" class="onboard-next" data-next="step4">
+                Continue
+              </button>
+            </div>
+          </div>
+
+          <!-- STEP 4 -->
+          <div class="onboard-step" id="step4">
+            <p class="subscribe-eyebrow">Message Preferences</p>
+            <h2>Choose how your tag is written</h2>
+
+            <p class="subscribe-copy">
+              Select the belief perspective and language you would like your
+              bear’s message to reflect.
+            </p>
+
+            <div class="preference-block">
+              <label class="preference-label" for="beliefSelect"
+                >Belief / Perspective</label
+              >
+              <select id="beliefSelect" class="preference-select">
+                <option value="">Choose one</option>
+                <option value="Buddhism">Buddhism</option>
+                <option value="Catholicism">Catholicism</option>
+                <option value="Christian">Christianity</option>
+                <option value="Confucianism">Confucianism</option>
+                <option value="Hinduism">Hinduism</option>
+                <option value="Islam">Islam</option>
+                <option value="Taoism">Taoism</option>
+                <option value="Shintoism">Shintoism</option>
+              </select>
+            </div>
+
+            <div class="preference-block">
+              <label class="preference-label" for="languageSelect"
+                >Tag Language</label
+              >
+              <select id="languageSelect" class="preference-select">
+                <option value="">Choose one</option>
+                <option value="English">English</option>
+                <option value="Arabic">Arabic</option>
+                <option value="Burmese">Burmese</option>
+                <option value="Cantonese">Cantonese</option>
+                <option value="Hindi">Hindi</option>
+                <option value="Indonesian">Indonesian</option>
+                <option value="Japanese">Japanese</option>
+                <option value="Khmer">Khmer</option>
+                <option value="Korean">Korean</option>
+                <option value="Mandarin-Chinese">Mandarin-Chinese</option>
+                <option value="Tagalog">Tagalog</option>
+                <option value="Thai">Thai</option>
+                <option value="Vietnamese">Vietnamese</option>
+              </select>
+            </div>
+
+            <div class="onboard-actions">
+              <button type="button" class="onboard-back" data-back="step3">
+                Back
+              </button>
+              <button type="button" class="onboard-next" data-next="step5">
+                Continue
+              </button>
+            </div>
+          </div>
+
+          <!-- STEP 5 -->
+          <div class="onboard-step" id="step5">
+            <p class="subscribe-eyebrow">Create Your Account</p>
+            <h2>Save your subscription</h2>
+
+            <p class="subscribe-copy">
+              Create your account to continue with your monthly teddy
+              subscription.
+            </p>
+
+            <div class="signup-step-form">
+              <div class="signup-field">
+                <label for="signupNameStep">Name</label>
+                <input
+                  id="signupNameStep"
+                  type="text"
+                  placeholder="Enter your name"
+                />
+              </div>
+
+              <div class="signup-field">
+                <label for="signupEmailStep">Email</label>
+                <input
+                  id="signupEmailStep"
+                  type="email"
+                  placeholder="Enter your email"
+                />
+              </div>
+
+              <div class="signup-field">
+                <label for="signupPasswordStep">Password</label>
+                <input
+                  id="signupPasswordStep"
+                  type="password"
+                  placeholder="Create a password"
+                />
+              </div>
+
+              <div class="signup-field">
+                <label for="signupConfirmStep">Confirm Password</label>
+                <input
+                  id="signupConfirmStep"
+                  type="password"
+                  placeholder="Confirm your password"
+                />
+              </div>
+            </div>
+
+            <div class="onboard-actions">
+              <button type="button" class="onboard-back" data-back="step4">
+                Back
+              </button>
+              <button type="button" class="onboard-next" data-next="step6">
+                Continue
+              </button>
+            </div>
+          </div>
+
+          <!-- STEP 6 -->
+          <div class="onboard-step" id="step6">
+            <p class="subscribe-eyebrow">Review</p>
+            <h2>You're all set</h2>
+
+            <p class="subscribe-copy">
+              You’re about to begin your Gentle Words subscription. Each month,
+              you’ll receive a teddy with a message designed to support
+              reflection and softer thinking.
+            </p>
+
+            <div class="summary-box">
+              <p><strong>Subscription:</strong> $5 / month</p>
+              <p><strong>Includes:</strong> Monthly teddy + message</p>
+              <p>
+                <strong>Support:</strong> A portion goes to your selected causes
+              </p>
+            </div>
+
+            <p class="final-note">
+              You can update your preferences anytime in your account.
+            </p>
+
+            <div class="onboard-actions">
+              <button type="button" class="onboard-back" data-back="step5">
+                Back
+              </button>
+
+              <button
+                type="button"
+                class="onboard-next confirm-button"
+                data-next="step7"
+              >
+                Confirm Subscription
+              </button>
+            </div>
+          </div>
+
+          <!-- STEP 7 -->
+          <div class="onboard-step success-step" id="step7">
+            <div class="success-icon">✓</div>
+
+            <p class="subscribe-eyebrow">Confirmed</p>
+            <h2>Your subscription is all set</h2>
+
+            <p class="subscribe-copy">
+              A confirmation email and next steps will be sent to your account.
+            </p>
+
+            <div class="onboard-actions success-actions">
+              <button
+                type="button"
+                class="confirm-button"
+                id="closeSubscribeSuccess"
+              >
+                Done
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
-  </div>
-</div>
+    <!-- LOGIN POPUP -->
+    <div class="auth-modal" id="authModal" aria-hidden="true">
+      <div class="auth-backdrop" id="authBackdrop"></div>
 
+      <div class="auth-dialog">
+        <button class="auth-close" id="closeAuth">×</button>
+
+        <div class="auth-panel">
+          <div class="auth-form-wrap">
+            <h2>Log In</h2>
+
+            <form class="auth-form">
+              <label>Email</label>
+              <input type="email" placeholder="Enter your email" />
+
+              <label>Password</label>
+              <input type="password" placeholder="Enter your password" />
+
+              <div class="auth-links">
+                <a href="#">Forgot password?</a>
+              </div>
+
+              <button type="submit" class="auth-button">Log In</button>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>&copy; 2026 Gentle Words. DES505 Capstone Project.</p>
-  </footer>
+    <!-- FOOTER -->
+    <footer>
+      <p>&copy; 2026 Gentle Words. DES505 Capstone Project.</p>
+    </footer>
 
-  <script src="main.js"></script>
-</body>
+    <script src="main.js"></script>
+  </body>
 </html>
