@@ -167,4 +167,19 @@ if (closeSubscribeSuccess) {
     }
   });
 
+  /* =========================
+   LEARN MORE EXPANDED
+  ========================= */
+
+  document.querySelectorAll(".expand-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const card = btn.closest(".feature-side-card");
+    card.classList.toggle("expanded");
+
+    btn.textContent = card.classList.contains("expanded")
+      ? "Show Less"
+      : "Learn More";
+  });
+});
+
 });
