@@ -654,6 +654,20 @@ nav {
   align-items: center;
 }
 
+.event-item {
+  opacity: 0;
+  transform: translateY(80px);
+
+  transition:
+    opacity 1s ease,
+    transform 1s ease;
+}
+
+.event-item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .event-item:last-child {
   border-bottom: none;
 }

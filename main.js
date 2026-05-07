@@ -438,4 +438,27 @@ subscriptionCards.forEach((card) => {
   subscriptionObserver.observe(card);
 });
 
+/* =========================
+   EVENT SCROLL REVEAL
+========================= */
+
+const eventCards = document.querySelectorAll(".event-item");
+
+const eventObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  },
+  {
+    threshold: 0.15
+  }
+);
+
+eventCards.forEach((card) => {
+  eventObserver.observe(card);
+});
+
 });
