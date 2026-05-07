@@ -56,7 +56,7 @@ main {
 
 /* NAV */
 nav {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -68,7 +68,7 @@ nav {
   justify-content: space-between;
   align-items: center;
 
-  background: transparent;
+  background: rgb(249, 233, 189, 0.5);
   border-bottom: 1px solid rgba(255, 255, 255, 0.25);
 
   box-shadow: none;
@@ -283,6 +283,8 @@ nav {
   padding: 90px 0 110px;
   background: #f9e9bd;
   position: relative;
+  z-index: 5;
+  border-top: 1px solid var(--teal);
 }
 
 .subscription-section .section-heading {
@@ -338,6 +340,19 @@ nav {
   justify-content: center;
   align-items: center;
   gap: 18px;
+}
+
+.step-card {
+  opacity: 0;
+  transform: translateY(80px);
+  transition:
+    opacity 1s ease,
+    transform 1s ease;
+}
+
+.step-card.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .step-card::before {
@@ -429,6 +444,7 @@ nav {
 .purpose {
   padding: 100px 0;
   background: #f9e9bd;
+  padding-bottom: 140px;
 }
 
 .gentle-wrap {
@@ -634,7 +650,7 @@ nav {
   grid-template-columns: 220px 1fr;
   gap: 24px;
   padding: 28px 0;
-  border-bottom: 1px solid rgba(16, 53, 34, 0.16);
+  border-bottom: 1px solid var(--teal);
   align-items: center;
 }
 

@@ -415,4 +415,27 @@ if (storyPopup) {
   });
 }
 
+/* =========================
+   SUBSCRIPTION SCROLL REVEAL
+========================= */
+
+const subscriptionCards = document.querySelectorAll(".step-card");
+
+const subscriptionObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  },
+  {
+    threshold: 0.2
+  }
+);
+
+subscriptionCards.forEach((card) => {
+  subscriptionObserver.observe(card);
+});
+
 });
