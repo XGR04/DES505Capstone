@@ -182,4 +182,77 @@ if (closeSubscribeSuccess) {
   });
 });
 
+/* =========================
+   REFLECTION QUOTES
+========================= */
+
+const quotes = [
+  {
+    text: "With hardship comes ease.",
+    author: "Quran 94:6"
+  },
+  {
+    text: "Peace I leave with you; my peace I give you.",
+    author: "John 14:27"
+  },
+  {
+    text: "A calm mind brings inner strength and self confidence.",
+    author: "Bhagavad Gita"
+  },
+  {
+    text: "Nothing can harm you as much as your own thoughts unguarded.",
+    author: "Buddha"
+  }
+];
+
+let currentQuote = 0;
+
+const quoteText = document.getElementById("quoteText");
+const quoteAuthor = document.getElementById("quoteAuthor");
+const quoteDots = document.getElementById("quoteDots");
+
+function showQuote(index) {
+  if (!quoteText || !quoteAuthor) return;
+
+  quoteText.classList.add("quote-fade");
+  quoteAuthor.classList.add("quote-fade");
+
+  setTimeout(() => {
+    quoteText.textContent = `“${quotes[index].text}”`;
+    quoteAuthor.textContent = quotes[index].author;
+
+    document.querySelectorAll(".quote-dot").forEach((dot, dotIndex) => {
+      dot.classList.toggle("active", dotIndex === index);
+    });
+
+    quoteText.classList.remove("quote-fade");
+    quoteAuthor.classList.remove("quote-fade");
+  }, 250);
+}
+
+if (quoteDots) {
+  quotes.forEach((quote, index) => {
+    const dot = document.createElement("button");
+    dot.classList.add("quote-dot");
+
+    if (index === 0) {
+      dot.classList.add("active");
+    }
+
+    dot.type = "button";
+
+    dot.addEventListener("click", () => {
+      currentQuote = index;
+      showQuote(currentQuote);
+    });
+
+    quoteDots.appendChild(dot);
+  });
+}
+
+setInterval(() => {
+  currentQuote = (currentQuote + 1) % quotes.length;
+  showQuote(currentQuote);
+}, 8000);
+
 });

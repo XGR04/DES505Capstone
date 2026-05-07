@@ -76,6 +76,7 @@ nav {
 
 .logo {
   font-size: 1.5rem;
+  font-weight: 600;
 }
 
 .logo,
@@ -481,6 +482,10 @@ nav {
   line-height: 1.5;
 }
 
+.label {
+  font-weight: 700;
+}
+
 /* REFLECTION */
 .reflection-card {
   max-width: 650px;
@@ -497,12 +502,72 @@ nav {
   color: var(--deep-green);
   margin-bottom: 14px;
   max-width: 820px;
+  min-height: 110px;
 }
 
 .quote-subtext {
   color: var(--deep-green);
   max-width: 620px;
   font-size: 25px;
+  min-height: 30px;
+}
+
+.quote-text,
+.quote-subtext {
+  transition: opacity 0.25s ease;
+}
+
+.quote-fade {
+  opacity: 0;
+}
+
+.quote-controls {
+  display: flex;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.quote-controls button {
+  width: 42px;
+  height: 42px;
+
+  border-radius: 50%;
+  border: none;
+
+  background: rgba(255, 255, 255, 0.35);
+  color: var(--deep-green);
+
+  font-size: 1rem;
+  cursor: pointer;
+
+  backdrop-filter: blur(6px);
+  transition: 0.25s ease;
+}
+
+.quote-controls button:hover {
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.quote-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.quote-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(16, 53, 34, 0.25);
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.quote-dot.active {
+  background: var(--deep-green);
+  transform: scale(1.15);
 }
 
 .reflect-sec {
