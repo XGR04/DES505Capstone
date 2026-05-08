@@ -162,6 +162,32 @@ nav {
   background: rgba(136, 154, 68, 0.08);
 }
 
+/* FIXED INTRO */
+.fixed-intro {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 160vh;
+  z-index: 1;
+  will-change: transform;
+}
+
+.intro-spacer {
+  height: 175vh;
+}
+
+.subscription-section,
+.reflect-sec,
+.feature-section,
+.greenstrip,
+.stories-section,
+.home-floral-band,
+footer {
+  position: relative;
+  z-index: 5;
+}
+
 /* HERO */
 .home-hero {
   position: relative;
@@ -444,7 +470,7 @@ nav {
 .purpose {
   padding: 100px 0;
   background: #f9e9bd;
-  padding-bottom: 140px;
+  padding-bottom: 200px;
 }
 
 .gentle-wrap {

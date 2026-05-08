@@ -1,5 +1,19 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+  const fixedIntro = document.querySelector(".fixed-intro");
+
+function moveIntro() {
+  if (!fixedIntro) return;
+
+  const maxMove = window.innerHeight;
+  const scrollAmount = Math.min(window.scrollY, maxMove);
+
+  fixedIntro.style.transform = `translateY(-${scrollAmount}px)`;
+}
+
+window.addEventListener("scroll", moveIntro);
+moveIntro();
+
   /* =========================
      LANGUAGE MENU
   ========================= */
