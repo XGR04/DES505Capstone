@@ -1051,8 +1051,26 @@ footer {
   border-bottom: 1px solid var(--teal);
 }
 
-.footer-left {
-  max-width: 420px;
+.footer-social a {
+  display: inline-flex;
+  align-items: center;
+}
+
+.footer-social img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+
+  opacity: 0.75;
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.footer-social img:hover {
+  opacity: 1;
+  transform: translateY(-2px);
 }
 
 .footer-left h3 {
@@ -1065,6 +1083,12 @@ footer {
   color: #e2d9b1;
   line-height: 1.8;
   font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+
+.footer-left h4 {
+    color: #fff3bb;
+    font-size: 1.25rem;
 }
 
 .footer-copy {
