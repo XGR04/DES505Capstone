@@ -373,12 +373,60 @@ footer p {
 }
 
 /* FOOTER */
-footer {
+.site-footer {
   width: 100%;
-  padding: 24px 0;
-  border-top: 1px solid var(--border);
+  background: #80923f;
+  padding: 70px 0 34px;
+  border-top: 1px solid var(--teal);
+}
+
+.footer-inner {
+  width: min(1180px, calc(100% - 60px));
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 80px;
+
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--teal);
+}
+
+.footer-left {
+  max-width: 420px;
+}
+
+.footer-left h3 {
+  color: #fff3bb;
+  font-size: 1.5rem;
+  margin-bottom: 18px;
+}
+
+.footer-left p {
+  color: #e2d9b1;
+  line-height: 1.8;
+  font-size: 0.95rem;
+}
+
+.footer-copy {
   text-align: center;
-  background: #f3e6a4;
+  margin-top: 24px;
+  color: #e2d9b1;
+  font-size: 0.85rem;
+}
+
+.footer-right h4 {
+  color: #fff3bb;
+  font-size: 1.25rem;
+  margin-bottom: 18px;
+}
+
+.footer-resources p {
+  color: rgba(239,229,186,0.72);
+  margin-bottom: 12px;
+  line-height: 1.7;
+  font-size: 0.95rem;
 }
 
 /* TABLET */
