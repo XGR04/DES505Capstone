@@ -45,10 +45,10 @@ body {
 
   background: linear-gradient(
     to bottom,
-    rgba(243, 230, 164, 0) 0%,
-    rgba(243, 230, 164, 0.35) 50%,
-    rgba(243, 230, 164, 0.75) 80%,
-    #f3e6a4 100%
+    rgba(249, 233, 189, 0) 0%,
+    rgba(249, 233, 189, 0.35) 50%,
+    rgba(249, 233, 189, 0.75) 80%,
+    #f9e9bd 100%
   );
 
   pointer-events: none;
@@ -100,7 +100,7 @@ body {
 
 /* GENERAL */
 .about-section {
-  padding: 88px 0;
+  padding: 20px 0px 120px;
   margin: 0;
 }
 
@@ -118,21 +118,12 @@ body {
   max-width: 520px;
 }
 
-.about-main h2 {
-  font-size: 1.9rem;
-  font-weight: 500;
-  margin-bottom: 24px;
-  letter-spacing: -0.01em;
-  color: #200000;
-}
-
 .about-main h3,
-.about-block h3,
-.ov-strip-conte h3 {
-  font-size: 1.25rem;
+.about-block h3 {
+  font-size: 2rem;
   font-weight: 500;
   margin-bottom: 12px;
-  color: #200000;
+  color: #103522;
 }
 
 .about-block {
@@ -145,11 +136,9 @@ body {
 
 .about-main p,
 .about-block p,
-.about-list li,
-.testimonial p,
-footer p {
-  color: var(--text-soft);
-  font-size: 1rem;
+.about-list li{
+  color: #18442d;
+  font-size: 1.25rem;
   line-height: 1.85;
   font-weight: 400;
 }
@@ -169,7 +158,7 @@ footer p {
 
 /* PLAIN BACKGROUND SECTIONS */
 .plain-bg {
-  background: #f3e6a4;
+  background: #f9e9bd;
 }
 
 /* OVERVIEW */
@@ -179,6 +168,7 @@ footer p {
   margin: 0;
   height: 340px;
   overflow: hidden;
+  background: #f9e9bd;
 }
 
 .overview-strip img {
@@ -187,43 +177,6 @@ footer p {
   object-fit: cover;
   object-position: center 97%;
   display: block;
-}
-
-.ov-strip-conte {
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 0 24px;
-}
-
-.ov-strip-conte::before {
-  content: "";
-  position: absolute;
-  width: 720px;
-  max-width: 90%;
-  height: 180px;
-  background: rgba(240, 226, 186, 0.22);
-  border: 1px solid rgba(255, 248, 235, 0.18);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-radius: 24px;
-  z-index: -1;
-}
-
-.ov-strip-conte h3,
-.ov-strip-conte p {
-  color: #200000;
-  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.14);
-}
-
-.ov-strip-conte p {
-  max-width: 600px;
-  line-height: 1.75;
 }
 
 /* SHARED IMAGE */
@@ -270,6 +223,7 @@ footer p {
   position: relative;
   overflow: hidden;
   padding: 100px 0;
+  background: #f7e6b8;
 }
 
 .services-bg {
@@ -364,18 +318,148 @@ footer p {
 }
 
 /* TESTIMONIAL */
-.testimonial {
-  margin-top: 14px;
-  padding: 16px 18px;
-  background: rgba(255, 255, 255, 0.45);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-medium);
+.testimonial-cloud {
+  position: relative;
+  min-height: 760px;
+  width: min(1200px, 100%);
+  margin: 0 auto;
+}
+
+.testimonial-card {
+  position: absolute;
+
+  width: 350px;
+  padding: 20px;
+
+  background: #fff8d1c7;
+  color: #103522;
+
+  border: 1px solid rgba(16, 53, 34, 0.12);
+  border-radius: 10px;
+  box-shadow: 0 14px 30px rgba(47, 36, 31, 0.08);
+
+}
+
+.testimonial-card p {
+  font-size: 1.25rem;
+  line-height: 1.65;
+  color: #18442d;
+}
+
+.testimonial-section-full {
+  display: block;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.testimonial-section-full .about-main {
+  max-width: 100%;
+  width: 100%;
+}
+
+/* center card */
+.center-card {
+  position: absolute;
+
+  padding: 20px;
+  left: 50%;
+  top: 150px;
+
+  background: #fff8d1c7;
+  border: 1px solid #02626d;
+  color: #103522;
+  width: 300px;
+
+  transform: translateX(-50%);
+
+  text-align: center;
+  z-index: 5;
+  
+}
+
+.center-card img {
+  width: 100%;
+  height: 300px;
+
+  object-fit: cover;
+
+  border-radius: 15px;
+
+  margin-bottom: 16px;
+}
+
+.center-card p {
+  margin-bottom: 12px;
+}
+
+/* input */
+.testimonial-input {
+  display: block;
+
+  width: 100%;
+  min-height: 100px;
+
+  margin: 14px auto 0;
+  padding: 14px;
+
+  border-radius: 16px;
+  border: 1px solid rgba(16, 53, 34, 0.14);
+
+  background: #fffaf3;
+
+  resize: none;
+
+  font: inherit;
+  color: #103522;
+}
+
+.testimonial-submit {
+  display: block;
+
+  margin: 16px auto 0;
+  padding: 10px 18px;
+
+  border: none;
+  border-radius: 999px;
+
+  background: #103522;
+  color: #fffaf3;
+
+  cursor: pointer;
+
+  font: inherit;
+  transition: 0.25s ease;
+}
+
+.testimonial-submit:hover {
+  background: #18442d;
+}
+
+/* floating positions */
+.t1 {
+  top: 70px;
+  left: 40px;
+}
+
+.t2 {
+  top: 30px;
+  right: 120px;
+}
+
+.t3 {
+  bottom: 130px;
+  left: 120px;
+}
+
+.t4 {
+  bottom: 90px;
+  right: 60px;
 }
 
 /* FOOTER */
 .site-footer {
   width: 100%;
-  background: #80923f;
+  background: #f9e9bd;
   padding: 70px 0 34px;
   border-top: 1px solid var(--teal);
 }
@@ -393,37 +477,61 @@ footer p {
   border-bottom: 1px solid var(--teal);
 }
 
-.footer-left {
-  max-width: 420px;
+.footer-social a {
+  display: inline-flex;
+  align-items: center;
+}
+
+.footer-social img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+
+  opacity: 0.75;
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.footer-social img:hover {
+  opacity: 1;
+  transform: translateY(-2px);
 }
 
 .footer-left h3 {
-  color: #fff3bb;
+  color: #103522;
   font-size: 1.5rem;
   margin-bottom: 18px;
 }
 
 .footer-left p {
-  color: #e2d9b1;
+  color: #200000;
   line-height: 1.8;
   font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+
+.footer-left h4 {
+    color: #103522;
+    font-size: 1.25rem;
 }
 
 .footer-copy {
   text-align: center;
   margin-top: 24px;
-  color: #e2d9b1;
+  color: #866147;
   font-size: 0.85rem;
 }
 
 .footer-right h4 {
-  color: #fff3bb;
+  color: #103522;
   font-size: 1.25rem;
   margin-bottom: 18px;
 }
 
 .footer-resources p {
-  color: rgba(239,229,186,0.72);
+  color: #200000;
   margin-bottom: 12px;
   line-height: 1.7;
   font-size: 0.95rem;
@@ -459,15 +567,6 @@ footer p {
   .overview-strip {
     height: 220px;
     margin-top: 64px;
-  }
-
-  .ov-strip-conte {
-    padding: 0 28px;
-  }
-
-  .ov-strip-conte::before {
-    width: 92%;
-    height: 160px;
   }
 
   .about-cont-story .about-img,
@@ -538,16 +637,6 @@ footer p {
     height: 200px;
   }
 
-  .ov-strip-conte {
-    padding: 0 18px;
-  }
-
-  .ov-strip-conte::before {
-    width: 94%;
-    height: 150px;
-    border-radius: 20px;
-  }
-
   .services-section {
     padding: 52px 0;
   }
@@ -558,7 +647,6 @@ footer p {
   }
 
   .about-main h3,
-  .ov-strip-conte h3,
   .about-block h3 {
     font-size: 1.1rem;
   }
