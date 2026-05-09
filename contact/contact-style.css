@@ -229,6 +229,123 @@ body {
   background: #684733;
 }
 
+/* MESSAGE SENT POPUP */
+.message-popup {
+  position: fixed;
+  inset: 0;
+  z-index: 5000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px;
+
+  background: rgba(16, 53, 34, 0.18);
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition: 0.3s ease;
+}
+
+.message-popup.show {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.message-popup-card {
+  position: relative;
+  max-width: 480px;
+  width: 100%;
+
+  background: #faf6ef;
+  border: 1px solid rgba(120, 92, 58, 0.12);
+  border-radius: 28px;
+
+  padding: 42px 34px;
+  text-align: center;
+
+  box-shadow: 0 18px 44px rgba(74, 53, 39, 0.14);
+
+  transform: translateY(12px) scale(0.98);
+  transition: 0.3s ease;
+}
+
+.message-popup.show .message-popup-card {
+  transform: translateY(0) scale(1);
+}
+
+.message-popup.show .message-popup-icon {
+  animation: checkPop 0.5s ease;
+}
+
+.message-popup-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+
+  width: 38px;
+  height: 38px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(120, 92, 58, 0.08);
+  color: #4a3527;
+
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.message-popup-icon {
+  width: 72px;
+  height: 72px;
+
+  margin: 0 auto 20px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(123, 87, 61, 0.1);
+  color: var(--deep-green);
+
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.message-popup-card h3 {
+  color: #200000;
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+}
+
+.message-popup-card p {
+  color: #5f544d;
+  line-height: 1.7;
+}
+
+@keyframes checkPop {
+  0% {
+    transform: scale(0.4);
+    opacity: 0;
+  }
+
+  60% {
+    transform: scale(1.12);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
 /* NEWSLETTER */
 .newsletter-card {
   border-radius: 30px;
@@ -297,18 +414,14 @@ body {
 /* MAP / IMAGE */
 .map-section {
   max-width: var(--max-width);
-  margin: 34px auto 0;
+  margin: 35px auto 100px;
 }
 
-.map-placeholder {
-  min-height: 300px;
-  border-radius: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #7e6858;
-  font-size: 1rem;
-  text-transform: lowercase;
+.interactive-map {
+  width: 100%;
+  height: 420px;
+  border: none;
+  display: block;
 }
 
 /* FOOTER */

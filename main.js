@@ -1,5 +1,45 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+  /* =========================
+   CONTACT MESSAGE POPUP
+========================= */
+
+const contactForm = document.getElementById("contactForm");
+const messagePopup = document.getElementById("messagePopup");
+const closeMessagePopup = document.getElementById("closeMessagePopup");
+
+function openMessagePopup() {
+  if (!messagePopup) return;
+  messagePopup.classList.add("show");
+  messagePopup.setAttribute("aria-hidden", "false");
+}
+
+function closeMessagePopupModal() {
+  if (!messagePopup) return;
+  messagePopup.classList.remove("show");
+  messagePopup.setAttribute("aria-hidden", "true");
+}
+
+if (contactForm) {
+  contactForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+    openMessagePopup();
+    contactForm.reset();
+  });
+}
+
+if (closeMessagePopup) {
+  closeMessagePopup.addEventListener("click", closeMessagePopupModal);
+}
+
+if (messagePopup) {
+  messagePopup.addEventListener("click", function (event) {
+    if (event.target === messagePopup) {
+      closeMessagePopupModal();
+    }
+  });
+}
+
   const fixedIntro = document.querySelector(".fixed-intro");
 
 function moveIntro() {
