@@ -523,39 +523,31 @@ const testimonialButton = document.getElementById("addTestimonial");
 const testimonialInput = document.getElementById("testimonialInput");
 const testimonialCloud = document.getElementById("testimonialCloud");
 
-let savedTestimonials = JSON.parse(localStorage.getItem("gentleTestimonials")) || [];
-
-function createTestimonialNote(message) {
-  const note = document.createElement("div");
-  note.classList.add("testimonial-note");
-
-  const randomRotate = (Math.random() * 6 - 3).toFixed(1);
-  note.style.transform = `rotate(${randomRotate}deg)`;
-
-  note.innerHTML = `
-    <p>“${message}”</p>
-  `;
-
-  testimonialCloud.prepend(note);
-}
-
 if (testimonialButton && testimonialInput && testimonialCloud) {
-  savedTestimonials.forEach((message) => {
-    createTestimonialNote(message);
-  });
 
   testimonialButton.addEventListener("click", () => {
+
     const message = testimonialInput.value.trim();
 
     if (message === "") return;
 
-    savedTestimonials.push(message);
-    localStorage.setItem("gentleTestimonials", JSON.stringify(savedTestimonials));
+    const note = document.createElement("div");
+    note.classList.add("testimonial-note");
 
-    createTestimonialNote(message);
+    const randomRotate = (Math.random() * 6 - 3).toFixed(1);
+
+    note.style.transform = `rotate(${randomRotate}deg)`;
+
+    note.innerHTML = `
+      <p>“${message}”</p>
+    `;
+
+    testimonialCloud.prepend(note);
 
     testimonialInput.value = "";
+
   });
+
 }
 
 });
