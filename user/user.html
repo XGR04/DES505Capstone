@@ -138,6 +138,7 @@
 
       <label>Belief Perspective</label>
       <select id="beliefPreference">
+        <option value="General">General [motivational quote]</option>
         <option>Buddhism</option>
         <option>Catholicism</option>
         <option>Christianity</option>
@@ -148,19 +149,29 @@
         <option>Shintoism</option>
       </select>
 
+      <div class="preference-block">
+  <label class="preference-label" for="bearOptionSelect">Monthly Bear Option</label>
+  <select id="bearOptionSelect" class="preference-select">
+    <option value="">Choose one</option>
+    <option value="new-bear">New bear + new tag every month</option>
+    <option value="tag-only">Keep first bear, receive a new tag monthly</option>
+  </select>
+</div>
+
       <label>Accessory Preference</label>
       <select id="accessoryPreference">
         <option>Surprise Me</option>
         <option>Keep It Simple</option>
       </select>
-
-      <button type="button" class="save-profile-btn">
-        Save Preferences
-      </button>
-    </form>
   </div>
 
 </section>
+
+<div class="preference-save-wrap">
+  <button type="button" class="confirm-button">
+    Save Preferences
+  </button>
+</div>
 
 <script src="../main.js"></script>
 
