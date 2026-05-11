@@ -609,4 +609,17 @@ aboutRevealItems.forEach((item) => {
   aboutRevealObserver.observe(item);
 });
 
+/* =========================
+   MOBILE MENU
+========================= */
+
+const menuToggle = document.getElementById("menuToggle");
+const navRight = document.querySelector(".nav-right");
+
+if (menuToggle && navRight) {
+  menuToggle.addEventListener("click", function () {
+    navRight.classList.toggle("show");
+  });
+}
+
 });
