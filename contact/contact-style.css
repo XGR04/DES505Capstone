@@ -422,6 +422,7 @@ body {
   height: 420px;
   border: none;
   display: block;
+  border-radius: 10px;
 }
 
 /* FOOTER */

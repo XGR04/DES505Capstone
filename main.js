@@ -558,4 +558,30 @@ if (testimonialButton && testimonialInput && testimonialCloud) {
   });
 }
 
+/* =========================
+   ABOUT PAGE SCROLL REVEAL
+========================= */
+
+const aboutRevealItems = document.querySelectorAll(
+  ".vismis-card, .services-text, .bear-img, .testimonial-note"
+);
+
+const aboutRevealObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  },
+  {
+    threshold: 0.18
+  }
+);
+
+aboutRevealItems.forEach((item) => {
+  item.classList.add("reveal-on-scroll");
+  aboutRevealObserver.observe(item);
+});
+
 });

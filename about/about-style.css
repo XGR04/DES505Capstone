@@ -173,12 +173,6 @@ body {
   text-align: center;
 }
 
-.story-floral {
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
-}
-
 .flipped-flower {
   transform: scaleX(-1);
 }
@@ -195,11 +189,6 @@ body {
   justify-content: space-between;
   align-items: flex-start;
   gap: 64px;
-}
-
-.about-cont-split .about-main {
-  flex: 1;
-  max-width: 520px;
 }
 
 .about-main h3,
@@ -255,9 +244,8 @@ body {
   margin-bottom: 80px;
 }
 
-.vismis-title h2 {
-  font-family: "erotique-alternate", sans-serif;
-  font-size: 3rem;
+.vismis-title h3 {
+  font-size: 1.25rem;
   color: #632a0b;
   margin-bottom: 12px;
 }
@@ -399,34 +387,6 @@ body {
 
 .about-img img {
   display: block;
-}
-
-/* STORY + COMMUNITY */
-.about-cont-story .about-main {
-  flex: 1.1;
-  max-width: 560px;
-}
-
-.about-cont-story .about-img {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.about-cont-split {
-  margin-bottom: 80px;
-}
-
-.story-img {
-  width: 100%;
-  height: 500px;
-  margin-left: auto;
-  border-radius: 10px;
-}
-
-.story-img img {
-  object-fit: cover;
-  border-radius: 10px;
 }
 
 /* SERVICES */
@@ -820,6 +780,16 @@ body {
   font-size: 0.95rem;
 }
 
+/* SCROLL REVEAL */
+.reveal-on-scroll {
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.reveal-on-scroll.show {
+  opacity: 1;
+}
+
 /* TABLET */
 @media (max-width: 980px) {
   body {
@@ -845,8 +815,6 @@ body {
 }
 
   .about-cont,
-  .about-cont-split,
-  .about-cont-story,
   .about-cont-serv {
     flex-direction: column;
     gap: 28px;
@@ -857,21 +825,15 @@ body {
     margin-top: 64px;
   }
 
-  .about-cont-story .about-img,
   .about-cont-serv .about-img {
     justify-content: flex-start;
   }
 
-  .story-img,
   .bear-img {
     max-width: 100%;
     height: auto;
     margin-left: 0;
     margin-right: 0;
-  }
-
-  .story-img img {
-    height: auto;
   }
 
   .bear-img img {
@@ -931,7 +893,7 @@ body {
     max-width: 210px;
   }
 
-  .vismis-title h2 {
+  .vismis-title h3 {
   font-size: 2.2rem;
 }
 
