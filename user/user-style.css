@@ -1,0 +1,160 @@
+body {
+  background: #f9e9bd;
+  color: #103522;
+}
+
+/* HERO */
+.profile-hero {
+  min-height: 420px;
+  padding: 150px 24px 80px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.profile-hero-content {
+  max-width: 720px;
+}
+
+.profile-kicker {
+  color: #8b5a2b;
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+.profile-hero h1 {
+  font-family: "erotique-alternate", sans-serif;
+  font-size: 3.4rem;
+  color: #632a0b;
+  margin-bottom: 16px;
+}
+
+.profile-hero p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+/* PROFILE */
+.profile-section {
+  width: min(1000px, calc(100% - 48px));
+  margin: 0 auto 120px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 34px;
+}
+
+.profile-card {
+  padding: 38px 34px;
+
+  background: rgba(255, 250, 239, 0.65);
+  border: 1.5px solid rgba(222, 168, 108, 0.72);
+  border-radius: 28px;
+
+  box-shadow: 0 0 45px rgba(244, 186, 120, 0.2);
+}
+
+.profile-card.full-card {
+  grid-column: 1 / -1;
+}
+
+.profile-card h2 {
+  font-size: 1.6rem;
+  color: #632a0b;
+  margin-bottom: 22px;
+}
+
+.profile-info p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #18442d;
+  margin-bottom: 10px;
+}
+
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.profile-form label {
+  color: #18442d;
+  font-weight: 600;
+}
+
+.profile-form select {
+  padding: 13px 16px;
+  border-radius: 16px;
+  border: 1px solid rgba(16, 53, 34, 0.14);
+  background: #fffaf0;
+  font: inherit;
+  color: #18442d;
+}
+
+.save-profile-btn {
+  margin-top: 14px;
+  padding: 13px 22px;
+  border: none;
+  border-radius: 999px;
+  background: #103522;
+  color: #fffaf3;
+  font: inherit;
+  cursor: pointer;
+}
+
+.profile-form input {
+  padding: 13px 16px;
+  border-radius: 16px;
+  border: 1px solid rgba(16, 53, 34, 0.14);
+  background: #fffaf0;
+  font: inherit;
+  color: #18442d;
+}
+
+.payment-toggle {
+  margin-top: 10px;
+  padding: 14px 18px;
+
+  border-radius: 16px;
+
+  background: rgba(255, 250, 239, 0.7);
+
+  border: 1px dashed rgba(16, 53, 34, 0.2);
+
+  cursor: pointer;
+
+  color: #18442d;
+  font-weight: 600;
+}
+
+.payment-fields {
+  display: none;
+  margin-top: 18px;
+
+  flex-direction: column;
+  gap: 12px;
+}
+
+.payment-fields.show {
+  display: flex;
+}
+
+/* MOBILE */
+@media (max-width: 700px) {
+  .profile-hero {
+    min-height: 340px;
+    padding: 120px 22px 60px;
+  }
+
+  .profile-hero h1 {
+    font-size: 2.4rem;
+  }
+
+  .profile-section {
+    grid-template-columns: 1fr;
+    width: min(100%, calc(100% - 32px));
+  }
+}

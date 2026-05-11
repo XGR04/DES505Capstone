@@ -103,6 +103,7 @@ document.querySelectorAll(".language-panel button").forEach((button) => {
      AUTH MODAL (LOGIN)
   ========================= */
   const authModal = document.getElementById("authModal");
+  const authForm = document.querySelector(".auth-form");
   const openAuth = document.getElementById("openLogin");
   const closeAuth = document.getElementById("closeAuth");
   const authBackdrop = document.getElementById("authBackdrop");
@@ -124,6 +125,101 @@ document.querySelectorAll(".language-panel button").forEach((button) => {
   if (openAuth) openAuth.addEventListener("click", openAuthModal);
   if (closeAuth) closeAuth.addEventListener("click", closeAuthModal);
   if (authBackdrop) authBackdrop.addEventListener("click", closeAuthModal);
+
+  if (authForm) {
+  authForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    localStorage.setItem("gentleLoggedIn", "true");
+
+    if (
+  window.location.pathname.includes("/about/") ||
+  window.location.pathname.includes("/contact/")
+) {
+  window.location.href = "../user/user.html";
+} else {
+  window.location.href = "user/user.html";
+}
+  });
+}
+
+/* =========================
+   PERSONAL INFORMATION
+========================= */
+
+const saveInfoBtn = document.getElementById("saveInfoBtn");
+
+const savedName = document.getElementById("savedName");
+const savedEmail = document.getElementById("savedEmail");
+const savedAddress = document.getElementById("savedAddress");
+const savedCard = document.getElementById("savedCard");
+
+const nameInput = document.getElementById("nameInput");
+const emailInput = document.getElementById("emailInput");
+const addressInput = document.getElementById("addressInput");
+const cityInput = document.getElementById("cityInput");
+const stateInput = document.getElementById("stateInput");
+const postalInput = document.getElementById("postalInput");
+const cardNumberInput = document.getElementById("cardNumberInput");
+
+if (saveInfoBtn) {
+  saveInfoBtn.addEventListener("click", function () {
+    if (nameInput.value) savedName.textContent = nameInput.value;
+    if (emailInput.value) savedEmail.textContent = emailInput.value;
+
+    if (addressInput.value || cityInput.value || stateInput.value || postalInput.value) {
+      savedAddress.textContent =
+        `${addressInput.value}, ${cityInput.value}, ${stateInput.value} ${postalInput.value}`;
+    }
+
+    if (cardNumberInput.value.length >= 4) {
+      savedCard.textContent = `•••• ${cardNumberInput.value.slice(-4)}`;
+    }
+  });
+}
+
+/* =========================
+     CARD INFORMATION
+  ========================= */
+
+const cardNumberInput = document.getElementById("cardNumberInput");
+const savedCard = document.getElementById("savedCard");
+
+const saveInfoBtn = document.getElementById("saveInfoBtn");
+
+const savedName = document.getElementById("savedName");
+const savedEmail = document.getElementById("savedEmail");
+
+const nameInput = document.getElementById("nameInput");
+const emailInput = document.getElementById("emailInput");
+
+if (saveInfoBtn) {
+  saveInfoBtn.addEventListener("click", function () {
+
+    savedName.textContent = nameInput.value;
+    savedEmail.textContent = emailInput.value;
+
+    const cardValue = cardNumberInput.value;
+
+    if (cardValue.length >= 4) {
+      const lastFour = cardValue.slice(-4);
+      savedCard.textContent = `•••• ${lastFour}`;
+    }
+  });
+}
+
+/* =========================
+   PAYMENT TOGGLE
+========================= */
+
+const paymentToggle = document.getElementById("paymentToggle");
+const paymentFields = document.getElementById("paymentFields");
+
+if (paymentToggle && paymentFields) {
+  paymentToggle.addEventListener("click", function () {
+    paymentFields.classList.toggle("show");
+  });
+}
 
   /* =========================
      SUBSCRIBE MODAL

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Profile • Gentle Words</title>
+
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="user-style.css">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="https://use.typekit.net/amd7pdj.css">
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="../index.html" class="logo">gentle words</a>
+
+  <button class="menu-toggle" id="menuToggle" type="button">
+    ☰
+  </button>
+
+  <div class="nav-right">
+    <a href="../about/index.html">About Us</a>
+    <a href="../contact/index.html">Contact Us</a>
+
+    <button class="login-button">
+      Log Out
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="profile-hero">
+  <div class="profile-hero-content">
+    <p class="profile-kicker">Your Gentle Words Space</p>
+
+    <h1>Welcome Back</h1>
+
+    <p>
+      Manage your subscription, preferences, and monthly reflections.
+    </p>
+  </div>
+</section>
+
+<!-- PROFILE CONTENT -->
+<section class="profile-section">
+
+  <div class="profile-card">
+    <h2>Account Information</h2>
+
+    <div class="profile-info">
+      <p><strong>Name:</strong> <span id="savedName">Guest User</span></p>
+      <p><strong>Email:</strong> <span id="savedEmail">user@example.com</span></p>
+      <p><strong>Status:</strong> Active Subscriber</p>
+      <p><strong>Address:</strong> <span id="savedAddress">Not set</span></p>
+      <p><strong>Card:</strong> <span id="savedCard">Not set</span></p>
+    </div>
+  </div>
+
+  <div class="profile-card">
+    <h2>Preferences</h2>
+
+    <div class="profile-info">
+      <p><strong>Language:</strong> <span id="savedLanguage">English</span></p>
+      <p><strong>Belief Perspective:</strong> <span id="savedBelief">Buddhism</span></p>
+      <p><strong>Accessory Preference:</strong> <span id="savedAccessory">Surprise Me</span></p>
+    </div>
+  </div>
+
+  <div class="profile-card full-card">
+    <h2>Personal Information</h2>
+
+    <form class="profile-form">
+      <label>Name</label>
+      <input id="nameInput" type="text" placeholder="Enter your name">
+
+      <label>Email</label>
+      <input id="emailInput" type="email" placeholder="Enter your email">
+
+      <label>Address</label>
+      <input id="addressInput" type="text" placeholder="Street address">
+
+      <label>City</label>
+      <input id="cityInput" type="text" placeholder="City">
+
+      <label>State / Region</label>
+      <input id="stateInput" type="text" placeholder="State or region">
+
+      <label>Postal Code</label>
+      <input id="postalInput" type="text" placeholder="Postal code">
+
+      <div class="payment-toggle" id="paymentToggle">
+  + Add Payment Method
+</div>
+
+<div class="payment-fields" id="paymentFields">
+
+  <label>Cardholder Name</label>
+  <input id="cardNameInput" type="text" placeholder="Name on card">
+
+  <label>Card Number</label>
+  <input id="cardNumberInput" type="text" placeholder="**** **** **** 1234">
+
+  <label>Expiration Date</label>
+  <input id="cardExpiryInput" type="text" placeholder="MM / YY">
+
+  <label>CVV</label>
+  <input id="cardCVVInput" type="text" placeholder="123">
+
+</div>
+
+  <div class="profile-card full-card">
+    <h2>Change Preferences</h2>
+
+    <form class="profile-form">
+      <label>Language</label>
+      <select id="languagePreference">
+        <option>English</option>
+        <option>Arabic</option>
+        <option>Burmese</option>
+        <option>Hindi</option>
+        <option>Indonesian</option>
+        <option>Japanese</option>
+        <option>Korean</option>
+        <option>Mandarin-Chinese</option>
+        <option>Tagalog</option>
+        <option>Thai</option>
+        <option>Vietnamese</option>
+      </select>
+
+      <label>Belief Perspective</label>
+      <select id="beliefPreference">
+        <option>Buddhism</option>
+        <option>Catholicism</option>
+        <option>Christianity</option>
+        <option>Confucianism</option>
+        <option>Hinduism</option>
+        <option>Islam</option>
+        <option>Taoism</option>
+        <option>Shintoism</option>
+      </select>
+
+      <label>Accessory Preference</label>
+      <select id="accessoryPreference">
+        <option>Surprise Me</option>
+        <option>Keep It Simple</option>
+      </select>
+
+      <button type="button" class="save-profile-btn">
+        Save Preferences
+      </button>
+    </form>
+  </div>
+
+</section>
+
+<script src="../main.js"></script>
+
+</body>
+</html>
