@@ -841,7 +841,6 @@ footer {
   margin-bottom: 42px;
 }
 
-.stories-button,
 .story-link {
   text-decoration: none;
   color: var(--teal);
@@ -1890,73 +1889,64 @@ body.auth-lock {
     padding: 0 20px;
   }
 
-  .home-hero {
-  min-height: 620px;
+.home-hero {
+  min-height: 720px;
 }
 
 .home-hero-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: 38% center;
 }
 
 .home-hero-overlay {
-  min-height: 620px;
-
-  justify-content: flex-end;
+  min-height: 720px;
   align-items: center;
+  justify-content: center;
 
-  padding: 110px 22px 60px;
+  padding: 120px 28px 70px;
 
   background: linear-gradient(
     to bottom,
-    rgba(249, 233, 189, 0.15) 0%,
-    rgba(249, 233, 189, 0.35) 45%,
-    rgba(249, 233, 189, 0.85) 100%
+    rgba(249, 233, 189, 0.35) 0%,
+    rgba(249, 233, 189, 0.68) 45%,
+    rgba(249, 233, 189, 0.9) 100%
   );
 }
 
-.hero-text {
-  max-width: 280px;
-  margin: 0 auto;
-
-  font-size: 0.78rem;
-  line-height: 1.5;
-
-  padding-bottom: 16px;
-}
-
-
 .home-hero-text {
-  width: 100%;
-  max-width: 300px;
-
+  max-width: 310px;
   margin: 0 auto;
-
   text-align: center;
-}
 
-.home-hero-text h1 {
-  font-size: 1.45rem;
-  line-height: 1.08;
-  margin-bottom: 12px;
+  text-shadow: 0 1px 8px rgba(249, 233, 189, 0.9);
 }
 
 .hero-kicker {
-  font-size: 0.72rem;
-  margin-bottom: 8px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 22px;
+}
+
+.home-hero-text h1 {
+  font-size: 1.5rem;
+  line-height: 1.15;
+  margin-bottom: 24px;
+}
+
+.hero-text {
+  line-height: 1.75;
+  max-width: 290px;
+  margin: 0 auto;
+  padding-bottom: 30px;
 }
 
 .hero-button {
-  display: block;
-
-  width: fit-content;
-
+  display: inline-block;
   margin: 0 auto;
-
-  padding: 10px 18px;
-  font-size: 0.82rem;
+  padding: 12px 28px;
+  font-size: 0.95rem;
 }
 
   .stories-section {
@@ -1997,7 +1987,7 @@ body.auth-lock {
 }
 
 .subscription-section .section-heading h2 {
-  font-size: 1.9rem;
+  font-size: 1.5rem;
 }
 
 .subscription-section .section-heading p {
@@ -2147,7 +2137,6 @@ body.auth-lock {
     padding: 36px 18px 70px;
   }
 
-  .hero-kicker,
   .hero-text,
   .section-intro,
   .feature-main-content p,
@@ -2157,7 +2146,7 @@ body.auth-lock {
   .featured-text,
   .story-info p,
   .floral-card p {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
   }
 
 .event-list {
@@ -2285,6 +2274,14 @@ body.auth-lock {
   .footer-copy {
     margin-top: 12px;
     font-size: 10px;
+  }
+
+  .footer-right h4 {
+    font-size: 1.15rem;
+  }
+
+  .footer-left h4 {
+    display: none;
   }
 
 
