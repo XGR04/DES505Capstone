@@ -58,7 +58,7 @@ moveIntro();
      LANGUAGE MENU
   ========================= */
   const toggle = document.getElementById("languageToggle");
-  const panel = document.getElementById("languagePanel");
+  const panel = document.querySelector(".language-panel");
 
   if (toggle && panel) {
     toggle.addEventListener("click", function (event) {
@@ -73,6 +73,31 @@ moveIntro();
       }
     });
   }
+
+  window.googleTranslateElementInit = function () {
+  new google.translate.TranslateElement({
+    pageLanguage: "en",
+    includedLanguages: "en,ar,my,hi,id,ja,ko,zh-CN,tl,th,vi",
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+  }, "google_translate_element");
+};
+
+const translateScript = document.createElement("script");
+translateScript.src =
+  "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+
+document.body.appendChild(translateScript);
+
+document.querySelectorAll(".language-panel button").forEach((button) => {
+  button.addEventListener("click", () => {
+    const lang = button.getAttribute("data-lang");
+
+    document.cookie = `googtrans=/en/${lang}; path=/`;
+    document.cookie = `googtrans=/en/${lang}; path=/; domain=${location.hostname}`;
+
+    location.reload();
+  });
+});
 
   /* =========================
      AUTH MODAL (LOGIN)
