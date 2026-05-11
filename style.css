@@ -2230,8 +2230,21 @@ body.auth-lock {
     padding: 10px 20px 28px;
   }
 
+  .auth-form {
+    font-size: .75rem;
+  }
+
   .auth-panel {
-    padding: 64px 20px 28px;
+    padding: 20px 20px 30px;
+  }
+
+  .auth-links {
+    text-align: center;
+    margin-bottom: 18px;
+  }
+
+  .auth-links a {
+    font-size: 0.85rem;
   }
 
   .subscribe-inner h2,
