@@ -144,6 +144,40 @@ document.querySelectorAll(".language-panel button").forEach((button) => {
 }
 
 /* =========================
+   LOGGED IN NAV
+========================= */
+
+const isLoggedIn = localStorage.getItem("gentleLoggedIn");
+
+const subscribeButton = document.querySelector(".subscribe-button");
+const loginButton = document.getElementById("openLogin");
+const profileIcon = document.getElementById("profileIcon");
+
+if (isLoggedIn === "true") {
+
+  if (subscribeButton) {
+    subscribeButton.style.display = "none";
+  }
+
+  if (loginButton) {
+    loginButton.style.display = "none";
+  }
+
+  if (profileIcon) {
+    profileIcon.style.display = "flex";
+  }
+}
+
+const logoutButton = document.getElementById("logoutButton");
+
+if (logoutButton) {
+  logoutButton.addEventListener("click", function () {
+    localStorage.removeItem("gentleLoggedIn");
+    window.location.href = "../index.html";
+  });
+}
+
+/* =========================
    PERSONAL INFORMATION
 ========================= */
 
@@ -174,36 +208,6 @@ if (saveInfoBtn) {
 
     if (cardNumberInput.value.length >= 4) {
       savedCard.textContent = `•••• ${cardNumberInput.value.slice(-4)}`;
-    }
-  });
-}
-
-/* =========================
-     CARD INFORMATION
-  ========================= */
-
-const cardNumberInput = document.getElementById("cardNumberInput");
-const savedCard = document.getElementById("savedCard");
-
-const saveInfoBtn = document.getElementById("saveInfoBtn");
-
-const savedName = document.getElementById("savedName");
-const savedEmail = document.getElementById("savedEmail");
-
-const nameInput = document.getElementById("nameInput");
-const emailInput = document.getElementById("emailInput");
-
-if (saveInfoBtn) {
-  saveInfoBtn.addEventListener("click", function () {
-
-    savedName.textContent = nameInput.value;
-    savedEmail.textContent = emailInput.value;
-
-    const cardValue = cardNumberInput.value;
-
-    if (cardValue.length >= 4) {
-      const lastFour = cardValue.slice(-4);
-      savedCard.textContent = `•••• ${lastFour}`;
     }
   });
 }

@@ -116,6 +116,24 @@ nav {
   background: rgba(243, 230, 164, 0.38);
 }
 
+/* PROFILE */
+
+.profile-icon {
+  display: none;
+
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+}
+
+.profile-icon img {
+  width: 34px;
+  height: 34px;
+
+  object-fit: contain;
+}
+
 /* LANGUAGE */
 .language-menu {
   position: relative;
