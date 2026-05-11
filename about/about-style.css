@@ -245,6 +245,133 @@ body {
   background: #f9e9bd;
 }
 
+/* VISION + MISSION */
+.vismis-section {
+  padding: 120px 0 90px;
+}
+
+.vismis-title {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.vismis-title h2 {
+  font-family: "erotique-alternate", sans-serif;
+  font-size: 3rem;
+  color: #632a0b;
+  margin-bottom: 12px;
+}
+
+.vismis-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  color: #b57437;
+}
+
+.vismis-divider span {
+  width: 120px;
+  height: 1px;
+  background: rgba(181, 116, 55, 0.55);
+}
+
+.vismis-divider p {
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.vismis-wrap {
+  width: min(1180px, calc(100% - 64px));
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 54px;
+}
+
+.vismis-card {
+  position: relative;
+  padding: 70px 56px 56px;
+
+  background: rgba(255, 250, 239, 0.55);
+  border: 1.5px solid rgba(222, 168, 108, 0.75);
+
+  box-shadow:
+    0 0 45px rgba(244, 186, 120, 0.22);
+
+  overflow: hidden;
+}
+
+/* flower arch */
+.vismis-floral {
+  width: 120px;
+  height: 150px;
+
+  margin: 0 auto 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(214, 173, 122, 0.65);
+  border-radius: 60px 60px 6px 6px;
+
+  background: rgba(255, 248, 235, 0.58);
+}
+
+.vismis-floral img {
+  width: 54px;
+  height: auto;
+  opacity: 0.9;
+}
+
+.flip-flower {
+  transform: scaleX(-1);
+}
+
+.vismis-card h3 {
+  text-align: center;
+
+  font-family: "erotique-alternate", sans-serif;
+  font-size: 3rem;
+  font-weight: 400;
+
+  color: #632a0b;
+
+  margin-bottom: 18px;
+}
+
+.vismis-card h3::after {
+  content: "♡";
+  display: block;
+
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.3rem;
+  color: #b57437;
+
+  margin-top: 10px;
+}
+
+.vismis-card p,
+.vismis-list li {
+  color: #18442d;
+  font-size: 1rem;
+  line-height: 1.95;
+}
+
+.vismis-card p + p {
+  margin-top: 22px;
+}
+
+.vismis-list {
+  margin: 20px 0 22px 24px;
+}
+
+.vismis-list li {
+  margin-bottom: 10px;
+}
+
 /* OVERVIEW */
 .overview-strip {
   width: 100%;
@@ -712,6 +839,11 @@ body {
     max-width: 250px;
   }
 
+  .vismis-wrap {
+  grid-template-columns: 1fr;
+  gap: 36px;
+}
+
   .about-cont,
   .about-cont-split,
   .about-cont-story,
@@ -766,6 +898,8 @@ body {
 .testimonial-notes {
   grid-template-columns: repeat(2, 1fr);
 }
+
+
 }
 
 /* MOBILE */
@@ -796,6 +930,27 @@ body {
   .title-decor img {
     max-width: 210px;
   }
+
+  .vismis-title h2 {
+  font-size: 2.2rem;
+}
+
+.vismis-wrap {
+  width: min(100%, calc(100% - 28px));
+}
+
+.vismis-card {
+  padding: 50px 28px 40px;
+}
+
+.vismis-card h3 {
+  font-size: 2.4rem;
+}
+
+.vismis-card p,
+.vismis-list li {
+  font-size: 1rem;
+}
 
   .overview-strip {
     height: 200px;
