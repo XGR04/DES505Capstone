@@ -1995,6 +1995,25 @@ body.auth-lock {
   line-height: 1.65;
 }
 
+.about-section,
+.vismis-section,
+.story-section,
+.services-section,
+.testimonial-area {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.story-centered,
+.vismis-wrap,
+.testimonial-intro,
+.ref-card,
+.testimonial-notes {
+  width: min(100%, calc(100% - 32px));
+  margin-left: auto;
+  margin-right: auto;
+}
+
   .subscription-section,
   .purpose,
   .reflect-sec,
@@ -2296,6 +2315,5 @@ body.auth-lock {
   .footer-left h4 {
     display: none;
   }
-
 
 }
