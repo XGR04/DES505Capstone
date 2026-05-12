@@ -213,7 +213,7 @@ if (saveInfoBtn) {
 }
 
 /* =========================
-   PAYMENT TOGGLE
+   PAYMENT + ADDRESS TOGGLE
 ========================= */
 
 const paymentToggle = document.getElementById("paymentToggle");
@@ -225,6 +225,14 @@ if (paymentToggle && paymentFields) {
   });
 }
 
+const addressToggle = document.getElementById("addressToggle");
+const addressFields = document.getElementById("addressFields");
+
+if (addressToggle && addressFields) {
+  addressToggle.addEventListener("click", function () {
+    addressFields.classList.toggle("show");
+  });
+}
   /* =========================
      SUBSCRIBE MODAL
   ========================= */

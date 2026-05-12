@@ -85,17 +85,25 @@
       <label>Email</label>
       <input id="emailInput" type="email" placeholder="Enter your email">
 
-      <label>Address</label>
-      <input id="addressInput" type="text" placeholder="Street address">
+      <div class="payment-toggle" id="addressToggle">
+  + Add Address
+</div>
 
-      <label>City</label>
-      <input id="cityInput" type="text" placeholder="City">
+<div class="payment-fields" id="addressFields">
 
-      <label>State / Region</label>
-      <input id="stateInput" type="text" placeholder="State or region">
+  <label>Street Address</label>
+  <input id="addressInput" type="text" placeholder="Street address">
 
-      <label>Postal Code</label>
-      <input id="postalInput" type="text" placeholder="Postal code">
+  <label>City</label>
+  <input id="cityInput" type="text" placeholder="City">
+
+  <label>State / Region</label>
+  <input id="stateInput" type="text" placeholder="State or region">
+
+  <label>Postal Code</label>
+  <input id="postalInput" type="text" placeholder="Postal code">
+
+</div>
 
       <div class="payment-toggle" id="paymentToggle">
   + Add Payment Method
@@ -115,6 +123,12 @@
   <label>CVV</label>
   <input id="cardCVVInput" type="text" placeholder="123">
 
+</div>
+<button id="saveInfoBtn" class="save-profile-btn" type="button">
+  Save Personal Information
+</button>
+
+</form>
 </div>
 
   <div class="profile-card full-card">
@@ -138,7 +152,7 @@
 
       <label>Belief Perspective</label>
       <select id="beliefPreference">
-        <option value="General">General [motivational quote]</option>
+        <option value="General">General Motivational Quotes</option>
         <option>Buddhism</option>
         <option>Catholicism</option>
         <option>Christianity</option>
@@ -163,15 +177,16 @@
         <option>Surprise Me</option>
         <option>Keep It Simple</option>
       </select>
+      </form>
   </div>
-
-</section>
 
 <div class="preference-save-wrap">
   <button type="button" class="confirm-button">
     Save Preferences
   </button>
 </div>
+
+</section>
 
 <script src="../main.js"></script>
 

@@ -1278,6 +1278,33 @@ footer {
   font-size: 1.25rem;
 }
 
+.accessory-step {
+  position: relative;
+  overflow: hidden;
+}
+
+.accessory-step::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 45%;
+
+  background-image: url("imgs/acc.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+
+  pointer-events: none;
+  z-index: 1;
+}
+
+.accessory-step > * {
+  position: relative;
+  z-index: 2;
+}
+
 /* =========================
    SUBSCRIBE POPUP
 ========================= */
